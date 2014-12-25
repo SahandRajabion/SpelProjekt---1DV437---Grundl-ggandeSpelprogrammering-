@@ -1,0 +1,11 @@
+c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\Content\player.xnb
+c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\Content\player.png
+c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\GameProj.exe
+c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\GameProj.pdb
+c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\obj\x86\Debug\GameProj.csprojResolveAssemblyReference.cache
+c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\obj\x86\Debug\GameProj.exe
+c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\obj\x86\Debug\GameProj.pdb
+c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.xnb
+c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.wma
+c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.mp3

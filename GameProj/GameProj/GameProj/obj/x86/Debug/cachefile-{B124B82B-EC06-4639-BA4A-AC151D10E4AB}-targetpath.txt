@@ -1,0 +1,5 @@
+Content\player.xnb
+Content\sound.xnb
+Content\sound.wma
+Content\player.png
+Content\sound.mp3

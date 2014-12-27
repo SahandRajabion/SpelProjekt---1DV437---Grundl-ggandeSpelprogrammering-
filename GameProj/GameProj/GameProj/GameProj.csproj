@@ -66,27 +66,38 @@
     <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BetweenLevelController.cs" />
     <Compile Include="Controller\GameStateEnum.cs" />
+    <Compile Include="Model\Collision.cs" />
+    <Compile Include="Model\FloatRectangle.cs" />
+    <Compile Include="Model\GetLevel.cs" />
+    <Compile Include="Model\Level.cs" />
+    <Compile Include="Model\Model.cs" />
     <Compile Include="Model\Character.cs" />
-    <Compile Include="Model\Player.cs" />
+    <Compile Include="View\BetweenLevels.cs" />
     <Compile Include="View\Camera.cs" />
     <Compile Include="View\CharacterMovement.cs" />
     <Compile Include="Controller\MasterController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="View\CharacterView.cs" />
+    <Compile Include="View\GameView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
     </Content>
+    <Content Include="Level1.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GameProjContent\GameProjContent.contentproj">

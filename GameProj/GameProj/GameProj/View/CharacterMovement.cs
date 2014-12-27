@@ -15,22 +15,23 @@ namespace GameProj
     {
 
         Texture2D spriteTexture;
-        float time = 0f;
+        float timer = 0f;
         float interval = 200f;
         int currentFrame = 0;
-        int spriteWidth;
-        int spriteHeight;
-        int spriteSpeed = 2;
       
+        //todo: Koppla till camera 
+        int spriteWidth = 32;
+        int spriteHeight = 48;
         Rectangle sourceRect;
         Vector2 position;
         Vector2 origin;
-
-        KeyboardState currentKeyState;
-        KeyboardState previousKeyState;
+        KeyboardState currentKBState;
+        KeyboardState previousKBState;
       
      
-       
+        
+     
+
         public CharacterMovement(Texture2D texture, int currentFrame, int spriteWidth, int spriteHeight)
         {
             this.spriteTexture = texture;
@@ -40,72 +41,62 @@ namespace GameProj
         }
 
 
+
         public Vector2 Position
+
         {
+
             get { return position; }
-            set { position = value;}
+
+            set { position = value; }
+
         }
+
+ 
 
         public Vector2 Origin
 
         {
+
              get { return origin; }
-             set { origin = value;}
+
+             set { origin = value; }
+
         }
+
+ 
 
         public Texture2D Texture
+
         {
+
             get { return spriteTexture; }
-            set { spriteTexture = value;}
+
+            set { spriteTexture = value; }
+
         }
+
+ 
 
         public Rectangle SourceRect
+
         {
+
             get { return sourceRect; }
+
             set { sourceRect = value; }
+
+
         }
 
-
-        public void AnimationSprite(GameTime gameTime)
+        public void AnimationSprite(float timeElapsedMilliSeconds, View.CharacterView.Movement movement)
         {
-            previousKeyState = currentKeyState;
-            currentKeyState = Keyboard.GetState();
+            previousKBState = currentKBState;
+            currentKBState = Keyboard.GetState();
 
             sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
 
-         
-            // Allows the Character to Run faster.
-            if (currentKeyState.IsKeyDown(Keys.Space))
-            {
-                spriteSpeed = 5;
-                interval = 100;
-            }
-            else
-            {
-                spriteSpeed = 2;
-                interval = 200;
-            }
-
-            if (currentKeyState.IsKeyDown(Keys.Right) == true)
-            {
-                AnimateRight(gameTime);
-                if (position.X < 780)
-                {
-                    position.X += spriteSpeed;
-                }
-            }
-
-            if (currentKeyState.IsKeyDown(Keys.Left) == true)
-            {
-                AnimateLeft(gameTime);
-                if (position.X > 20)
-                {
-                    position.X -= spriteSpeed;
-                }
-            }
-
-            //Decides frame depending on pressed key / animates only when key is pressed.
-            if (currentKeyState.GetPressedKeys().Length == 0)
+            if (currentKBState.GetPressedKeys().Length == 0)
             {
                 if (currentFrame > 0 && currentFrame < 4)
                 {
@@ -125,24 +116,55 @@ namespace GameProj
                 }
             }
 
-           
-            
-            origin = new Vector2(sourceRect.Width / 2, sourceRect.Height / 2);
+        
+
+            if (movement.Equals(GameProj.View.CharacterView.Movement.RIGHTMOVE))
+            {
+                
+                if (position.X < 780)
+                {
+                    AnimateRight(timeElapsedMilliSeconds);
+                }
+            }
+
+            if (movement.Equals(GameProj.View.CharacterView.Movement.LEFTMOVE))
+            {
+                {
+                    
+                    if (position.X > 20)
+                    {
+                        AnimateLeft(timeElapsedMilliSeconds);
+                    }
+                }
+
+
+            if (movement.Equals(GameProj.View.CharacterView.Movement.STANDING))
+            {
+                if (currentFrame > 0 && currentFrame < 4)
+                {
+                    currentFrame = 0;
+                }
+
+                    
+            }
+
+                origin = new Vector2(sourceRect.Width / 2, sourceRect.Height / 2);
+            }
         }
 
      
   
 
-        public void AnimateRight(GameTime gameTime)
+        public void AnimateRight(float timeElapsedMilliSeconds)
         {
-            if (currentKeyState != previousKeyState)
+            if (currentKBState != previousKBState)
             {
                 currentFrame = 9;
             }
 
-            time += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            timer += timeElapsedMilliSeconds;
 
-            if (time > interval)
+            if (timer > interval)
             {
                 currentFrame++;
 
@@ -150,21 +172,22 @@ namespace GameProj
                 {
                     currentFrame = 8;
                 }
-                time = 0f;
+                timer = 0f;
             }
         }
 
-      
-        public void AnimateLeft(GameTime gameTime)
+       
+
+        public void AnimateLeft(float timeElapsedMilliSeconds)
         {
-            if (currentKeyState != previousKeyState)
+            if (currentKBState != previousKBState)
             {
                 currentFrame = 5;
             }
 
-            time += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            timer += timeElapsedMilliSeconds;
 
-            if (time > interval)
+            if (timer > interval)
             {
                 currentFrame++;
 
@@ -172,8 +195,39 @@ namespace GameProj
                 {
                     currentFrame = 4;
                 }
-                time = 0f;
+                timer = 0f;
             }
         }
+
+       
+
+        public bool PlayerPressedJump()
+        {
+            return Keyboard.GetState().IsKeyDown(Keys.Up);
+        }
+
+        public bool PlayerPressedRight()
+        {
+            return Keyboard.GetState().IsKeyDown(Keys.Right);
+        }
+
+
+        public bool PlayerPressedLeft()
+        {
+            return Keyboard.GetState().IsKeyDown(Keys.Left);
+        }
+
+        public bool PlayerPressedRun()
+        {
+            return Keyboard.GetState().IsKeyDown(Keys.Space);
+        }
+
+
+        internal bool PlayerPressedQuit()
+        {
+            return Keyboard.GetState().IsKeyDown(Keys.Escape);
+        }
+
+       
     }
 }

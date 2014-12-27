@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\Content\player.xnb</Output>
-      <Time>2014-12-18T01:22:37.3620236+01:00</Time>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\player.xnb</Output>
+      <Time>2014-12-18T01:22:38+01:00</Time>
     </Item>
     <Item>
       <Source>sound.mp3</Source>
@@ -16,9 +16,145 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.xnb</Output>
-      <Extra>c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.wma</Extra>
-      <Time>2014-12-18T03:53:57.1843597+01:00</Time>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.xnb</Output>
+      <Extra>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.wma</Extra>
+      <Time>2014-12-18T03:53:58+01:00</Time>
+    </Item>
+    <Item>
+      <Source>background.png</Source>
+      <Name>background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2014-12-24T20:09:23.7171138+01:00</Time>
+    </Item>
+    <Item>
+      <Source>backgroundxna.png</Source>
+      <Name>backgroundxna</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\backgroundxna.xnb</Output>
+      <Time>2014-12-24T20:12:24.1984368+01:00</Time>
+    </Item>
+    <Item>
+      <Source>tile.png</Source>
+      <Name>tile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tile.xnb</Output>
+      <Time>2014-12-25T01:10:56.5475407+01:00</Time>
+    </Item>
+    <Item>
+      <Source>EmptyTile.png</Source>
+      <Name>EmptyTile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\EmptyTile.xnb</Output>
+      <Time>2014-12-25T01:11:05.7110648+01:00</Time>
+    </Item>
+    <Item>
+      <Source>bg2.jpg</Source>
+      <Name>bg2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\bg2.xnb</Output>
+      <Time>2014-12-25T01:50:51.7575389+01:00</Time>
+    </Item>
+    <Item>
+      <Source>space.jpg</Source>
+      <Name>space</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\space.xnb</Output>
+      <Time>2014-12-25T02:05:45.6536668+01:00</Time>
+    </Item>
+    <Item>
+      <Source>spaceman.png</Source>
+      <Name>spaceman</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\spaceman.xnb</Output>
+      <Time>2014-12-25T02:10:29.7169143+01:00</Time>
+    </Item>
+    <Item>
+      <Source>rsz_spaceman.png</Source>
+      <Name>rsz_spaceman</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\rsz_spaceman.xnb</Output>
+      <Time>2014-12-25T02:14:05.144236+01:00</Time>
+    </Item>
+    <Item>
+      <Source>jumping.mp3</Source>
+      <Name>jumping</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.xnb</Output>
+      <Extra>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.wma</Extra>
+      <Time>2014-12-25T02:28:05.0732772+01:00</Time>
+    </Item>
+    <Item>
+      <Source>asteroid.png</Source>
+      <Name>asteroid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\asteroid.xnb</Output>
+      <Time>2014-12-25T02:47:32.9450757+01:00</Time>
+    </Item>
+    <Item>
+      <Source>gohan.png</Source>
+      <Name>gohan</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\gohan.xnb</Output>
+      <Time>2014-12-25T03:11:54.0896484+01:00</Time>
+    </Item>
+    <Item>
+      <Source>trans.png</Source>
+      <Name>trans</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\trans.xnb</Output>
+      <Time>2014-12-26T18:24:25.7957189+01:00</Time>
+    </Item>
+    <Item>
+      <Source>xnaBackgroundGame.png</Source>
+      <Name>xnaBackgroundGame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\xnaBackgroundGame.xnb</Output>
+      <Time>2014-12-26T18:29:16.0013177+01:00</Time>
+    </Item>
+    <Item>
+      <Source>tile1.png</Source>
+      <Name>tile1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tile1.xnb</Output>
+      <Time>2014-12-26T18:33:05.1214226+01:00</Time>
+    </Item>
+    <Item>
+      <Source>backXNA.png</Source>
+      <Name>backXNA</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\backXNA.xnb</Output>
+      <Time>2014-12-27T00:03:37.7956146+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -26,39 +162,39 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProjContent\</RootDirectory>
-      <LoggerRootDirectory>c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\</LoggerRootDirectory>
-      <IntermediateDirectory>c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProjContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProjContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProjContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
         <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
         <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
         <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
         <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
         <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
         <Value>2010-08-23T13:41:18+02:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-11-04T03:32:36.5135679+01:00</Value>
+        <Value>2014-12-23T20:04:51.3472789+01:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

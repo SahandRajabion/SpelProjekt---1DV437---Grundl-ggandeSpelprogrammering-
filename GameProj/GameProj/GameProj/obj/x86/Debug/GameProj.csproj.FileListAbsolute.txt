@@ -9,3 +9,31 @@ c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj
 c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.xnb
 c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.wma
 c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.mp3
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\obj\x86\Debug\GameProj.exe
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\obj\x86\Debug\GameProj.pdb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\player.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.wma
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\player.png
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.mp3
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\GameProj.exe
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\GameProj.pdb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\obj\x86\Debug\GameProj.csprojResolveAssemblyReference.cache
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\background.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\backgroundxna.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tile.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\EmptyTile.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\bg2.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\space.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\spaceman.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\rsz_spaceman.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.wma
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.mp3
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\asteroid.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\gohan.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\trans.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\xnaBackgroundGame.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tile1.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\backXNA.xnb

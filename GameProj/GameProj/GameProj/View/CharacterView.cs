@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GameProj.Model;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -10,30 +11,134 @@ namespace GameProj.View
 {
     class CharacterView
     {
-        Texture2D characterTexture;
-        CharacterMovement charMovement;
+        Texture2D CharacterTexture;
+        CharacterMovement m_charMovement;
         SpriteBatch spriteBatch;
         
-        public CharacterView(GraphicsDevice GraphicsDevice, ContentManager Content)
+        private Rectangle m_destinationRectangle;
+
+        private Texture2D m_tileTexture;
+        private Texture2D m_BoxTexture;
+        private Texture2D m_BackTexture;
+
+        public CharacterView(GraphicsDevice GraphicsDevice, ContentManager Content, Model.Model m_model)
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            characterTexture = Content.Load<Texture2D>("player");
-
-            //Texture, Currentframe, spriteWidth, spriteHeight and Scale in Camera(HardCoded)
-            charMovement = new CharacterMovement(characterTexture, 9, 32, 48);
-            charMovement.Position = new Vector2(100, 350);
+            CharacterTexture = Content.Load<Texture2D>("player");
+            m_BoxTexture = Content.Load<Texture2D>("tile1");
+            m_BackTexture = Content.Load<Texture2D>("trans");
+           
+            //9= currentFrame, 32=  spriteWidth, 48= spriteHeight:  scale in camera.
+            m_charMovement = new CharacterMovement(CharacterTexture, 9, 32, 48);
+            m_charMovement.Position = new Vector2(100, 350);
             
         }
 
-        internal void Draw(GameTime gameTime)
+        public enum Movement
         {
-            charMovement.AnimationSprite(gameTime);
+            RIGHTMOVE = 0,
+            LEFTMOVE,
+            STANDING
+
+        };
+
+        public void AnimateRight(float timeElapsedMilliSeconds, Movement movement)
+        {
+             m_charMovement.AnimationSprite(timeElapsedMilliSeconds, movement);
+        
+        }
+
+        internal void AnimateLeft(float timeElapsedMilliSeconds, Movement movement)
+        {
+             m_charMovement.AnimationSprite(timeElapsedMilliSeconds, movement);
+        }
+
+       internal void AnimateStill(float timeElapsedMilliSeconds, Movement movement)
+        {
+            m_charMovement.AnimationSprite(timeElapsedMilliSeconds, movement);
+        }
+
+       
+        internal bool PressedQuit()
+        {
+            return m_charMovement.PlayerPressedQuit();
+        }
+
+        internal bool PressedJump()
+        {
+            return m_charMovement.PlayerPressedJump();
+        }
+
+        internal bool PressedRight()
+        {
+            return m_charMovement.PlayerPressedRight();
+        }
+
+        internal bool PressedLeft()
+        {
+            return m_charMovement.PlayerPressedLeft();
+        }
+
+
+        internal bool PressedRun()
+        {
+            return m_charMovement.PlayerPressedRun();
+        }
+
+
+    
+
+        internal void DrawMap(Viewport viewport, Camera m_camera, Model.Level level, Vector2 playerPosition)
+        {
+            Vector2 viewPortSize = new Vector2(viewport.Width, viewport.Height);
+            float scale = m_camera.GetScale();
 
             spriteBatch.Begin();
-            spriteBatch.Draw(charMovement.Texture, charMovement.Position, charMovement.SourceRect, Color.White, 0f, charMovement.Origin, 1.0f, SpriteEffects.None, 0);
+
+            for (int x = 0; x < Level.g_levelWidth; x++)
+            {
+                for (int y = 0; y < Level.g_levelHeight; y++)
+                {
+                    Vector2 viewPosition = m_camera.GetViewPosition(x, y, viewPortSize);
+                    DrawTile(viewPosition.X, viewPosition.Y, level.m_tiles[x, y], scale);
+                }
+            }
+
+            Vector2 characterViewPosition = m_camera.GetViewPosition(playerPosition.X, playerPosition.Y, viewPortSize);
+            DrawCharacterPos(characterViewPosition, scale);
             spriteBatch.End();
 
-            
         }
+
+        private void DrawTile(float x, float y, Model.Level.Tile tile, float scale)
+        {
+            if (tile == Level.Tile.FILLED)
+            {
+                m_tileTexture = m_BoxTexture;
+            }
+
+            else
+            {
+                m_tileTexture = m_BackTexture;
+            }
+
+            Rectangle destinationRectangle = new Rectangle((int)x, (int)y, (int)scale, (int)scale);
+
+            spriteBatch.Draw(m_tileTexture, destinationRectangle, Color.White);
+        }
+
+        private void DrawCharacterPos(Vector2 characterViewPosition, float scale)
+        {
+            m_destinationRectangle = new Rectangle((int)(characterViewPosition.X - scale / 2.0f), (int)(characterViewPosition.Y - scale), (int)scale, (int)scale);
+
+            spriteBatch.Draw(CharacterTexture, m_destinationRectangle, m_charMovement.SourceRect, Color.White);
+        }
+
+
+
+
+
+
+       
     }
 }

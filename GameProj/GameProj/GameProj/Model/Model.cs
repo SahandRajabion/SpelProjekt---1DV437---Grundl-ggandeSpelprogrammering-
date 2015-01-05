@@ -11,108 +11,176 @@ namespace GameProj.Model
 
         Character m_character;
         Level m_level;
-        bool m_hasCollidedWithGround = false;
+        bool m_collidedWithGround = false;
+        public static int Currentlevel = 0;
+        public bool levelCompleted;
+
+
 
         public Model(string levelString)
         {
-           m_level = new Level(levelString);
-           m_character = new Character();
-           m_character.Position = m_level.StartPosition;
+            m_level = new Level(levelString);
+            m_character = new Character();
+          
         }
 
+        /// <summary>
+        /// Gets the current level.
+        /// </summary>
         public Level GetLevel
         {
             get { return m_level; }
         }
 
+        /// <summary>
+        /// Gets the character.
+        /// </summary>
         public Character GetCharacter
         {
             get { return m_character; }
         }
 
+        /// <summary>
+        /// Makes character move left.
+        /// </summary>
         public void MoveLeft()
         {
             m_character.MoveLeft();
         }
 
+        /// <summary>
+        /// Makes character move right.
+        /// </summary>
         public void MoveRight()
         {
             m_character.MoveRight();
         }
 
-        internal void Run()
+        /// <summary>
+        /// Makes character float.
+        /// </summary>
+
+        internal void Float()
         {
-            m_character.Run();
+            m_character.Float();
         }
 
+        /// <summary>
+        /// Makes character jump.
+        /// </summary>
         public void Jump()
         {
             m_character.DoJump();
         }
 
+        /// <summary>
+        /// Decides if the character jump if it collided with the ground.
+        /// </summary>
+        /// <returns></returns>
         public bool CanPlayerJump()
         {
-            return m_hasCollidedWithGround;
+            return m_collidedWithGround;
         }
+
+
 
         public void Update(float totalElapsedSeconds)
         {
-            //Get the old position
+            //Get the old position.
             Vector2 oldPosition = m_character.Position;
             
-            //Get the new position
+            //Get the new character position.
             m_character.Update(totalElapsedSeconds);
             Vector2 newPosition = m_character.Position;
 
-            //Collide
-            m_hasCollidedWithGround = false;
+            
+            m_collidedWithGround = false;
             Vector2 velocity = m_character.Velocity;
 
-            if (didCollide(newPosition, m_character.SpriteSize))
+            //Updates the collision detail 
+            if (didCollide(newPosition, m_character.Size))
             {
-                Collision collision = getCollisionDetails(oldPosition, newPosition, m_character.SpriteSize, velocity);
-                m_hasCollidedWithGround = collision.m_groundCollide;
+                Collision collision = getCollisionDetails(oldPosition, newPosition, m_character.Size, velocity);
+                m_collidedWithGround = collision.m_groundCollide;
                
-                //set the new speed and position after collision
+                //set the new speed and position after collision.
                 m_character.Position = collision.m_CollisionPos;
                 m_character.Velocity = collision.m_CollisionSpeed;
             }
 
-            IfDiedInGap(totalElapsedSeconds);
-            IfDead();
-            IfReachedGoal();
+    
+            LevelCompleted();
         }
 
-      
 
-       
+        /// <summary>
+        /// Returns the updated character position.
+        /// </summary>
+        /// <returns></returns>
+        public Vector2 characterPosition() {
 
-        private void IfReachedGoal()
+            return m_character.Position;
+        
+        }
+
+        /// <summary>
+        /// Restarts the game when called.
+        /// </summary>
+        public void RestartGame()
         {
-            if (m_character.Position.X > Level.g_levelWidth)
-            {
-                m_character = new Character();
-                m_character.Position = m_level.StartPosition;
-            }
-        }
+            m_character = new Character();
+            StartGame();
 
-        private void IfDead()
+        }
+        //Resets the Character position to default. 
+        public Vector2 StartGame()
         {
-            if (m_character.GetCurrentLifes() <= 0)
-            {
-                m_character = new Character();
-                m_character.Position = m_level.StartPosition;
-            }
+            return m_character.Position = m_character.DefaultPosition();
+            
         }
 
-        private void IfDiedInGap(float a_elapsedTime)
+
+
+        /// <summary>
+        /// Returns true if the level is completed.
+        /// </summary>
+        /// <returns>If the character has passed the end of the map.</returns>
+        internal void LevelCompleted()
         {
-            if (m_level.CheckTileGapCollision(m_character.Position, m_character.SpriteSize))
+            if (m_character.Position.X >= Level.g_levelWidth)
             {
-                m_character.EliminateLife();
+              
+                levelCompleted = true;
             }
+          
         }
 
+
+        
+        /// <summary>
+        /// Decides if the character is dead or has any life left.
+        /// </summary>
+        /// <returns></returns>
+        public bool IfDead()
+        {
+          int left = GetCurrentLifes();
+            
+            if ( left <= 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+            
+            
+ 
+        /// <summary>
+        /// Checks if any Collision has happend.
+        /// </summary>
+        /// <param name="a_centerBottom"></param>
+        /// <param name="a_size"></param>
+        /// <returns></returns>
         private bool didCollide(Vector2 a_centerBottom, Vector2 a_size)
         {
             FloatRectangle occupiedArea = FloatRectangle.createFromCenterBottom(a_centerBottom, a_size);
@@ -123,6 +191,14 @@ namespace GameProj.Model
             return false;
         }
 
+        /// <summary>
+        /// Gets the collision details if DidCollide has happend.
+        /// </summary>
+        /// <param name="a_oldPos"></param>
+        /// <param name="a_newPosition"></param>
+        /// <param name="a_size"></param>
+        /// <param name="a_velocity"></param>
+        /// <returns></returns>
         private Collision getCollisionDetails(Vector2 a_oldPos, Vector2 a_newPosition, Vector2 a_size, Vector2 a_velocity)
         {
             Collision ret = new Collision(a_oldPos, a_velocity);
@@ -197,6 +273,33 @@ namespace GameProj.Model
             return a_velocity;
         }
 
-      
+
+       
+
+
+        /// <summary>
+        /// Lifes player has left 
+        /// </summary>
+        /// <returns>Returning players current lifes</returns>
+        public int GetCurrentLifes()
+        {
+            if (characterPosition().Y > Level.g_levelHeight)
+            {
+
+                return m_character.m_characterHealth--;
+
+            }
+
+            return Lifes();
+        }
+
+       public int Lifes()
+        {
+
+            return m_character.m_characterHealth;
+
+        }
+
+     
     }
 }

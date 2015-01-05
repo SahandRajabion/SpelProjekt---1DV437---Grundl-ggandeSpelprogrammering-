@@ -19,22 +19,38 @@ namespace GameProj
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        CharacterView charView;
-        private Camera m_camera;
-        private Song jumpSounding;
-        private Model.Model m_model;
-        KeyboardState keyboardState;
-        BetweenLevelController betweenLevelController;
-        public static int Currentlevel = 0;
-        GameState gamestate = GameState.StartingScreen;
 
+        private CharacterView characterView;
+        private PausScreenView pausView;
+        private Camera m_camera;
+
+        private Character character;
+        private Model.Model m_model;
+        private Level level;
+        private GetLevel getLevel;
+
+        private Song jumpSound;
+        private Song song;
+       
+        KeyboardState keyboardState;
+
+        MenuController menuController;
+        PausController pausController;
+
+        public int Currentlevel = 1;
+
+        GameState gamestate = GameState.StartScreen;
+   
+       
        
 
+        
+    
         public MasterController()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            
+            getLevel = new GetLevel();
         }
 
         /// <summary>
@@ -45,10 +61,10 @@ namespace GameProj
         /// </summary>
         protected override void Initialize()
         {
-            
-            m_camera = new Camera();
 
-            m_model = new Model.Model(GetLevel.GetLevels(1));
+            m_camera = new Camera();
+            m_model = new Model.Model(getLevel.GetLevels(Currentlevel));
+            level = new Level(getLevel.GetLevels(Currentlevel));
             base.Initialize();
         }
 
@@ -60,17 +76,19 @@ namespace GameProj
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            character = new Character();
+            
+            characterView = new CharacterView(GraphicsDevice, Content , m_model);
+            pausView = new PausScreenView(GraphicsDevice, Content);
 
+            menuController = new MenuController(new MenuView(GraphicsDevice, Content));
+            pausController = new PausController(pausView);
 
-            charView = new CharacterView(GraphicsDevice, Content , m_model);
+            jumpSound = Content.Load<Song>("jumping");
+            song = Content.Load<Song>("music");
 
-            betweenLevelController = new BetweenLevelController(new BetweenLevels(GraphicsDevice, Content));
-
-
-            jumpSounding = Content.Load<Song>("jumping");
-           /* Song song = Content.Load<Song>("sound");
-            MediaPlayer.Play(song);*/
-
+            
+           
             
         }
 
@@ -96,102 +114,243 @@ namespace GameProj
 
             float elapsedTimeSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
             float elapsedTimeMilliSeconds = (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-
-
-            if (gamestate == GameState.StartingScreen)
+            keyboardState = Keyboard.GetState();
+          
+            //START SKÄRM
+            if (gamestate == GameState.StartScreen)
             {
-                betweenLevelController.UpdateStartingScreen(keyboardState);
-                gamestate = betweenLevelController.GameState;
+                menuController.UpdateStartScreen(keyboardState);
+                gamestate = menuController.GameState;
+                
+              
+                if (gamestate == GameState.InGame)
+                {
+                  
+                    //audio.PlayMusic();
+                    menuController.GameState = GameState.BetweenLevels;
+                }
+                
+            }
+
+            else if (gamestate == GameState.BetweenLevels)
+            {
                
+                menuController.UpdateBetweenLevelScreen(keyboardState);
+                gamestate = menuController.GameState;
+                
+              
                 if (gamestate == GameState.InGame)
                 {
                     Currentlevel += 1;
-                    //play music ?
-                    betweenLevelController.GameState = GameState.BetweenLevels;
+                 
+                    //audio.PlayMusic();
+                    m_model = new Model.Model(getLevel.GetLevels(Currentlevel));
+                    getLevel.GetLevels(Currentlevel);
+                    m_model.GetLevel.ReadLevel();
+
+                    menuController.GameState = GameState.BetweenLevels;
+
+
                 }
+
             }
 
-            //Containing Boolian Value = If player pressed Right button (True/False)
-            bool RightMove = charView.PressedRight();
-            //Containing Boolian Value = If player pressed Left button (True/False)
-            bool LeftMove = charView.PressedLeft();
-            //Containing Boolian Value = If player pressed Run button (True/False)
-            bool RunFaster = charView.PressedRun();
-            //Containing Boolian Value = If player pressed Quit button (True/False)
-            bool Quit = charView.PressedQuit();
-            //Containing Boolian Value = If player pressed Jump button (True/False)
-            bool Jump = charView.PressedJump();
-
-
-            if (RunFaster == true)
+            //STARTA OM NIVÅ
+            if (keyboardState.IsKeyDown(Keys.R))
             {
-
-               m_model.Run();
-               
+                m_model.RestartGame();
+                character.ResetCharacterHealth();
             }
 
-
-
-            if (RightMove == true)
+            //PAUSA SPELET
+            if (keyboardState.IsKeyDown(Keys.P))
             {
-                m_model.MoveRight();
-
-                charView.AnimateRight(elapsedTimeMilliSeconds, CharacterView.Movement.RIGHTMOVE);
-            }
-
-            else if (LeftMove == true)
-            {
-                m_model.MoveLeft();
-
-                charView.AnimateLeft(elapsedTimeMilliSeconds, CharacterView.Movement.LEFTMOVE);
-            }
-            
-            if (Jump == true)
-            {
-                if (m_model.CanPlayerJump())
-                {
-                    m_model.Jump();
-
-                    MediaPlayer.Play(jumpSounding);
-                }
-            }
-
-            if (Quit == true)
-            {
-                this.Exit();
+                gamestate = GameState.GamePaused;
+                //audio.StopMusic();
             }
 
            
-            m_model.Update(elapsedTimeSeconds);
+            //OM SPELET ÄR PAUSAD.
+            if (gamestate == GameState.GamePaused)
+            {
+                pausController.UpdatePauseScreen(keyboardState);
+                gamestate = pausController.GameState;
+                
+                if (gamestate == GameState.InGame)
+                {
+                    pausController.GameState = GameState.GamePaused;
+                   // audio.PlayMusic();
+                }
+            }
 
+                // I SPELET
+                if (gamestate == GameState.InGame)
+                {
+                    //MediaPlayer.Play(song);
+
+                    //Containing Boolian Value = If player pressed Right button (True/False)
+                    bool RightMove = characterView.PressedRight();
+                    //Containing Boolian Value = If player pressed Left button (True/False)
+                    bool LeftMove = characterView.PressedLeft();
+                    //Containing Boolian Value = If player pressed Run button (True/False)
+                    bool RunFaster = characterView.PressedRun();
+                    //Containing Boolian Value = If player pressed Quit button (True/False)
+                    bool Quit = characterView.PressedQuit();
+                    //Containing Boolian Value = If player pressed Jump button (True/False)
+                    bool Jump = characterView.PressedJump();
+
+                    
+                    //Om spelaren är död...
+                    if (m_model.IfDead() == true)
+                    {
+                        gamestate = GameState.GameOver;
+                        // audio.StopMusic();
+                    }
+                        //Om spelaren fortfarande lever...
+                     else if(m_model.characterPosition().Y > Level.g_levelHeight){
+
+                        m_model.StartGame();              
+                    }
+                   
+                    // Float funktion i spelet.
+                    if (RunFaster == true)
+                    {
+                          m_model.Float();
+                    }
+
+                    //Höger rörelse
+                    if (RightMove == true)
+                    {
+                        m_model.MoveRight();
+                        characterView.AnimateRight(elapsedTimeMilliSeconds, CharacterView.Movement.RIGHTMOVE);
+                    }
+
+                    //Vänster rörelse
+                    else if (LeftMove == true)
+                    {
+                        m_model.MoveLeft();
+                        characterView.AnimateLeft(elapsedTimeMilliSeconds, CharacterView.Movement.LEFTMOVE);
+                    }
+
+                    //Spelare hoppar.
+                    if (Jump == true)
+                    {
+                        if (m_model.CanPlayerJump())
+                        {
+                            m_model.Jump();
+                            MediaPlayer.Play(jumpSound);
+                            MediaPlayer.Volume = 0.5f;
+                        }
+                    }
+                  
+                    //Spel avslutas.
+                    if (Quit == true)
+                    {
+                        this.Exit();
+                    }
+
+                    
+                    m_model.Update(elapsedTimeSeconds);
+
+          
+                    if (m_model.levelCompleted)
+                    {
+                        if (Currentlevel == 3)
+                        {
+                            gamestate = GameState.GameFinished;
+                        }
+                            
+
+                     else {
+
+                            gamestate = GameState.BetweenLevels;
+                            menuController.GameState = GameState.BetweenLevels;
+                        }
+                        
+                    }
+                          
+                }
+
+
+                if (gamestate == GameState.GameFinished)
+                {
+                  
+                    Currentlevel = 0;
+                    menuController.UpdateGameEnd(keyboardState);
+                    gamestate = menuController.GameState;
+                }
+
+                    if (gamestate == GameState.GameOver) {
+
+                       
+                            menuController.GameState = GameState.GameOver;
+                            menuController.UpdateStartScreen(keyboardState);
+                            gamestate = menuController.GameState;
+                          
+                        if (gamestate == GameState.InGame)
+                            {
+                                //audio.PlayMusic();
+                             
+                                character.ResetCharacterHealth();
+                                m_model.RestartGame();
+                                
+                                menuController.GameState = GameState.BetweenLevels;
+                            }
+                        }
+                    
 
             base.Update(gameTime);
         }
+      
 
-        /// <summary>z
+        /// <summary>
         /// Draws the levels & other information depending on gamestate.
         /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        /// <param name="gameTime"></param>
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
 
-            if (gamestate == GameState.StartingScreen)
+            if (gamestate == GameState.StartScreen)
             {
-                betweenLevelController.DrawStartingScreen();
+                menuController.DrawStartingScreen();
+            }
+
+            if (gamestate == GameState.GamePaused)
+            {
+                pausController.DrawPauseScreen();
+            }
+
+            if (gamestate == GameState.BetweenLevels)
+            {
+                menuController.DrawBetweenLevels(Currentlevel + 1);
+            }
+
+            if (gamestate == GameState.GameFinished)
+            {
+                menuController.DrawGameFinished();
+            }
+
+            if (gamestate == GameState.GameOver)
+            {
+                menuController.DrawGameOver();
             }
 
             if (gamestate == GameState.InGame)
             {
               
+
+                //Focus camera on player during the drawing.
+                m_camera.CenterOn(m_model.GetCharacter.Position, GraphicsDevice.Viewport,
+                new Vector2(Level.g_levelWidth, Level.g_levelHeight));
+                //Draws game background
+                menuController.DrawBackground();
+                //Draws current map
+                characterView.DrawMap(GraphicsDevice.Viewport, m_camera, m_model.GetLevel, m_model.GetCharacter.Position);
+            
             }
 
-            //Focus camera on player during the drawing.
-            m_camera.CenterOn(m_model.GetCharacter.Position,GraphicsDevice.Viewport,
-            new Vector2(Level.g_levelWidth, Level.g_levelHeight));
-
-           //Skriv ut om enter pressed (inGame)? 
-            charView.DrawMap(GraphicsDevice.Viewport, m_camera, m_model.GetLevel, m_model.GetCharacter.Position);
+           
             base.Draw(gameTime);
         }
     }

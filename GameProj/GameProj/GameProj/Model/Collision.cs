@@ -10,10 +10,8 @@ namespace GameProj.Model
     {
     
         public bool m_groundCollide = false;
-
         public Vector2 m_CollisionPos;
         public Vector2 m_CollisionSpeed;
-
 
         public Collision(Vector2 a_oldPos, Vector2 a_velocity)
         {

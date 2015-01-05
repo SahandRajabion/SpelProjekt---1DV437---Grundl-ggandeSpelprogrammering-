@@ -15,18 +15,21 @@ namespace GameProj
     {
 
         Texture2D spriteTexture;
+       
         float timer = 0f;
         float interval = 200f;
         int currentFrame = 0;
       
-        //todo: Koppla till camera 
+        //TODO: Koppla till camera Skala om
         int spriteWidth = 32;
         int spriteHeight = 48;
+     
         Rectangle sourceRect;
         Vector2 position;
         Vector2 origin;
-        KeyboardState currentKBState;
-        KeyboardState previousKBState;
+
+        KeyboardState currentKeyboardState;
+        KeyboardState previousKeyboardState;
       
      
         
@@ -41,41 +44,31 @@ namespace GameProj
         }
 
 
-
+        /// <summary>
+        /// Get&Set the texture position.
+        /// </summary>
         public Vector2 Position
-
         {
-
             get { return position; }
-
             set { position = value; }
-
         }
 
  
-
+        /*
         public Vector2 Origin
-
         {
-
              get { return origin; }
-
              set { origin = value; }
-
         }
 
  
 
         public Texture2D Texture
-
         {
-
             get { return spriteTexture; }
-
             set { spriteTexture = value; }
-
         }
-
+        */
  
 
         public Rectangle SourceRect
@@ -89,14 +82,15 @@ namespace GameProj
 
         }
 
+
         public void AnimationSprite(float timeElapsedMilliSeconds, View.CharacterView.Movement movement)
         {
-            previousKBState = currentKBState;
-            currentKBState = Keyboard.GetState();
+            previousKeyboardState = currentKeyboardState;
+            currentKeyboardState = Keyboard.GetState();
 
             sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
 
-            if (currentKBState.GetPressedKeys().Length == 0)
+          /*  if (currentKeyboardState.GetPressedKeys().Length == 0)
             {
                 if (currentFrame > 0 && currentFrame < 4)
                 {
@@ -114,7 +108,7 @@ namespace GameProj
                 {
                     currentFrame = 12;
                 }
-            }
+            }*/
 
         
 
@@ -123,6 +117,7 @@ namespace GameProj
                 
                 if (position.X < 780)
                 {
+                   
                     AnimateRight(timeElapsedMilliSeconds);
                 }
             }
@@ -157,7 +152,7 @@ namespace GameProj
 
         public void AnimateRight(float timeElapsedMilliSeconds)
         {
-            if (currentKBState != previousKBState)
+            if (currentKeyboardState != previousKeyboardState)
             {
                 currentFrame = 9;
             }
@@ -180,7 +175,7 @@ namespace GameProj
 
         public void AnimateLeft(float timeElapsedMilliSeconds)
         {
-            if (currentKBState != previousKBState)
+            if (currentKeyboardState != previousKeyboardState)
             {
                 currentFrame = 5;
             }

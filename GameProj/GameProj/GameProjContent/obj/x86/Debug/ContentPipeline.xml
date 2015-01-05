@@ -63,7 +63,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\bg2.xnb</Output>
-      <Time>2014-12-25T01:50:51.7575389+01:00</Time>
+      <Time>2015-01-03T04:03:50.5633035+01:00</Time>
     </Item>
     <Item>
       <Source>space.jpg</Source>
@@ -155,6 +155,124 @@
       <Options>None</Options>
       <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\backXNA.xnb</Output>
       <Time>2014-12-27T00:03:37.7956146+01:00</Time>
+    </Item>
+    <Item>
+      <Source>mE7ZNU1419698481.jpg</Source>
+      <Name>mE7ZNU1419698481</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\mE7ZNU1419698481.xnb</Output>
+      <Time>2014-12-27T17:44:17.7974686+01:00</Time>
+    </Item>
+    <Item>
+      <Source>startingScreen.jpg</Source>
+      <Name>startingScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\startingScreen.xnb</Output>
+      <Time>2014-12-27T17:44:30.7692105+01:00</Time>
+    </Item>
+    <Item>
+      <Source>cloudTile.png</Source>
+      <Name>cloudTile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloudTile.xnb</Output>
+      <Time>2014-12-27T17:48:20.8733717+01:00</Time>
+    </Item>
+    <Item>
+      <Source>cloud1.png</Source>
+      <Name>cloud1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloud1.xnb</Output>
+      <Time>2014-12-27T17:52:53.5609686+01:00</Time>
+    </Item>
+    <Item>
+      <Source>music.mp3</Source>
+      <Name>music</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.xnb</Output>
+      <Extra>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.wma</Extra>
+      <Time>2014-12-28T02:17:49.9228613+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PausScreen.jpg</Source>
+      <Name>PausScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\PausScreen.xnb</Output>
+      <Time>2014-12-28T03:12:28.514386+01:00</Time>
+    </Item>
+    <Item>
+      <Source>landscape.png</Source>
+      <Name>landscape</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\landscape.xnb</Output>
+      <Time>2014-12-30T17:52:30.2723753+01:00</Time>
+    </Item>
+    <Item>
+      <Source>latest.png</Source>
+      <Name>latest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\latest.xnb</Output>
+      <Time>2014-12-30T17:59:15.2485386+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Level2.jpg</Source>
+      <Name>Level2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\Level2.xnb</Output>
+      <Time>2014-12-30T18:20:55.1928912+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Level3.jpg</Source>
+      <Name>Level3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\Level3.xnb</Output>
+      <Time>2014-12-31T01:42:46.3203794+01:00</Time>
+    </Item>
+    <Item>
+      <Source>GameFinished.jpg</Source>
+      <Name>GameFinished</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\GameFinished.xnb</Output>
+      <Time>2014-12-31T01:50:19.5083003+01:00</Time>
+    </Item>
+    <Item>
+      <Source>levelTime.spritefont</Source>
+      <Name>levelTime</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\levelTime.xnb</Output>
+      <Time>2015-01-02T02:55:30.9667866+01:00</Time>
+    </Item>
+    <Item>
+      <Source>GameOver.jpg</Source>
+      <Name>GameOver</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\GameOver.xnb</Output>
+      <Time>2015-01-03T03:56:03.6505976+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

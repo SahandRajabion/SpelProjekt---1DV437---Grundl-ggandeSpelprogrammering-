@@ -10,14 +10,18 @@ namespace GameProj.Model
     {
 
         public const int g_levelWidth = 40;
-        public const int g_levelHeight = 7;
+        public const int g_levelHeight = 15;
 
         public Tile[,] m_tiles = new Tile[g_levelWidth, g_levelHeight];
 
         private char m_filled = 'x';
-        private char m_spriteStart = 's';
-        private char m_space = 'g';
-        private string m_levelString;
+        //private char m_spriteStart = 's';
+        //private char m_space = 'g';
+
+        Character character;
+        private string  m_currentLevel;
+
+     
 
         public enum Tile
         {
@@ -26,12 +30,13 @@ namespace GameProj.Model
             GAP
         };
 
-     
-       public Level(string levelString)
-        {
-            m_levelString = levelString;
+    
 
+        public Level(string levelString)
+        {
+            m_currentLevel = levelString;
             ReadLevel();
+            character = new Character();
         }
 
        public void ReadLevel()
@@ -42,22 +47,21 @@ namespace GameProj.Model
                 {
                     int tile = y * g_levelWidth + x;
 
-                    if (m_levelString[tile] == m_filled)
+                    if (m_currentLevel[tile] == m_filled)
                     {
                         m_tiles[x, y] = Tile.FILLED;
                     }
 
-                    else if (m_levelString[tile] == m_space)
+                 /*   else if (m_currentLevel[tile] == m_space)
                     {
                         m_tiles[x, y] = Tile.GAP;
                     }
 
-                    else if (m_levelString[tile] == m_spriteStart)
+                    else if (m_currentLevel[tile] == m_spriteStart)
                     {
-                        StartPosition = new Vector2(x + 0.5f, y);
-
+                     
                         m_tiles[x, y] = Tile.NONE;
-                    }
+                    }*/
 
                    
                     else
@@ -67,16 +71,19 @@ namespace GameProj.Model
                 }
             }
         }
+
+
+       
+
         
         /// <summary>
-        /// Checks if character sprite has collided with a Tile Gap.
+        /// Checks if character sprite has collided with a Gap(if died).
         /// </summary>
         /// <param name="a_position"></param>
         /// <param name="a_size"></param>
         /// <returns></returns>
         public bool CheckTileGapCollision(Vector2 a_position, Vector2 a_size)
         {
-          
 
             Vector2 bottomRightPostion = new Vector2(a_position.X + a_size.X / 2.0f, a_position.Y);
 
@@ -107,13 +114,17 @@ namespace GameProj.Model
         }
 
 
-        public Vector2 StartPosition
+       /* public Vector2 StartPosition
         {
             get;
             set;
         }
-
-
+        */
+        /// <summary>
+        /// Checks the collision between the player and the map tiles.
+        /// </summary>
+        /// <param name="a_rect"></param>
+        /// <returns></returns>
         public bool IsCollidingAt(FloatRectangle a_rect)
         {
             Vector2 tileSize = new Vector2(1, 1);

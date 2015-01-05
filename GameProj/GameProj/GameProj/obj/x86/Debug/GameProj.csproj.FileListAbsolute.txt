@@ -37,3 +37,17 @@ C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\trans.x
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\xnaBackgroundGame.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tile1.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\backXNA.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\mE7ZNU1419698481.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\startingScreen.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloudTile.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloud1.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.wma
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\PausScreen.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\landscape.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\latest.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\Level2.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\Level3.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\GameFinished.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\levelTime.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\GameOver.xnb

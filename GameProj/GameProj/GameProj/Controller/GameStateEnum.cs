@@ -7,11 +7,12 @@ namespace GameProj.Controller
 {
     enum GameState
     {
-        StartingScreen,
+        StartScreen,
         InGame,
-        BetweenLevels,
         GamePaused,
         GameFinished,
-        GameOver
+        GameOver,
+        BetweenLevels
+        
     }
 }

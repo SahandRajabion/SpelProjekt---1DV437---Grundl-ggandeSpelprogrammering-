@@ -10,25 +10,51 @@ namespace GameProj.Model
     {
         
         private Vector2 m_gravity;
-        private int m_Lifes = 3;
+        public int m_characterHealth = 3;
         private Vector2 m_modelPosition;
         private Vector2 m_velocity;
-      
+        private Vector2 m_defaultPosition;
+    
         public Character()
         {
             
             m_gravity = new Vector2(0,3f);
-            SpriteSize = new Vector2(0.9f, 0.9f);
+            Size = new Vector2(0.9f, 0.9f);
+            m_modelPosition = new Vector2(5,9);
+            m_defaultPosition = new Vector2(5,9);
             
+           
         }
 
-        
+        /// <summary>
+        /// Resets the character health.
+        /// </summary>
+        internal void ResetCharacterHealth()
+        {
+             m_characterHealth = 3;
+        }
+
+        /// <summary>
+        /// Get&set the current Character position.
+        /// </summary>
         public Vector2 Position
         {
             get { return m_modelPosition; }
             set { m_modelPosition = value; }
         }
 
+        /// <summary>
+        /// Character default Position
+        /// </summary>
+        /// <returns></returns>
+        public Vector2 DefaultPosition()
+        {
+             
+          return m_defaultPosition; 
+           
+        }
+
+        //Get&Set the velocity of player.
         public Vector2 Velocity
         {
             get { return m_velocity; }
@@ -36,24 +62,7 @@ namespace GameProj.Model
         }
 
 
-        /// <summary>
-        /// Removing lifes when the player has died. 
-        /// </summary>
-        public void EliminateLife()
-        {
-            m_Lifes--;
-        }
-
-       /// <summary>
-       /// Lifes player has left 
-       /// </summary>
-       /// <returns>Returning players current lifes</returns>
-        public int GetCurrentLifes()
-        {
-            return m_Lifes;
-        }
-
-      
+        //Updates the character position and velocity during the game.
         public void Update(float totalElapsedSeconds)
         {
             m_modelPosition += Velocity * totalElapsedSeconds;
@@ -76,12 +85,16 @@ namespace GameProj.Model
             m_velocity.X = 3.5f;
         }
 
-        internal void Run()
+        /// <summary>
+        /// Player velocity when floating
+        /// </summary>
+        internal void Float()
         {
             m_velocity.X = 5f;
         }
 
-        public Vector2 SpriteSize
+       
+        public Vector2 Size
         {
             get;
             set;
@@ -91,8 +104,7 @@ namespace GameProj.Model
         /// </summary>
         public void DoJump()
         {
-            m_velocity.Y = -5f;
-           
+            m_velocity.Y = -4f;
         }
 
       

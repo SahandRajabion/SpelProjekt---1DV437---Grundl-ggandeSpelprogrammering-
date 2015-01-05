@@ -14,20 +14,30 @@ namespace GameProj.View
         Texture2D CharacterTexture;
         CharacterMovement m_charMovement;
         SpriteBatch spriteBatch;
-        
+        Character character;
         private Rectangle m_destinationRectangle;
-
+        
         private Texture2D m_tileTexture;
         private Texture2D m_BoxTexture;
         private Texture2D m_BackTexture;
+        private SpriteFont lifeSprite;
+        private Model.Model model;
 
         public CharacterView(GraphicsDevice GraphicsDevice, ContentManager Content, Model.Model m_model)
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+         
             CharacterTexture = Content.Load<Texture2D>("player");
-            m_BoxTexture = Content.Load<Texture2D>("tile1");
             m_BackTexture = Content.Load<Texture2D>("trans");
+
+
+            m_BoxTexture = Content.Load<Texture2D>("cloud1");
+            lifeSprite = Content.Load<SpriteFont>("levelTime");
+
+            this.model = m_model;
+            character = new Character();
            
+            //TODO:Scale camera.
             //9= currentFrame, 32=  spriteWidth, 48= spriteHeight:  scale in camera.
             m_charMovement = new CharacterMovement(CharacterTexture, 9, 32, 48);
             m_charMovement.Position = new Vector2(100, 350);
@@ -87,9 +97,16 @@ namespace GameProj.View
 
 
     
-
+        /// <summary>
+        /// Draws the level map.
+        /// </summary>
+        /// <param name="viewport"></param>
+        /// <param name="m_camera"></param>
+        /// <param name="level"></param>
+        /// <param name="playerPosition"></param>
         internal void DrawMap(Viewport viewport, Camera m_camera, Model.Level level, Vector2 playerPosition)
         {
+            DrawLife(character);
             Vector2 viewPortSize = new Vector2(viewport.Width, viewport.Height);
             float scale = m_camera.GetScale();
 
@@ -110,6 +127,29 @@ namespace GameProj.View
 
         }
 
+        /// <summary>
+        /// Draws the current life left. 
+        /// </summary>
+        /// <param name="character"></param>
+        private void DrawLife(Character character)
+        {
+            Vector2 position = new Vector2(5, 5);
+
+            int test2 = model.Lifes();
+
+            spriteBatch.Begin();
+            spriteBatch.DrawString(lifeSprite, "Life: " + test2, position, Color.White);
+            spriteBatch.End();
+        }
+
+
+        /// <summary>
+        /// Draws the map tiles. 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="tile"></param>
+        /// <param name="scale"></param>
         private void DrawTile(float x, float y, Model.Level.Tile tile, float scale)
         {
             if (tile == Level.Tile.FILLED)
@@ -127,6 +167,12 @@ namespace GameProj.View
             spriteBatch.Draw(m_tileTexture, destinationRectangle, Color.White);
         }
 
+
+        /// <summary>
+        /// Draws the character position.
+        /// </summary>
+        /// <param name="characterViewPosition"></param>
+        /// <param name="scale"></param>
         private void DrawCharacterPos(Vector2 characterViewPosition, float scale)
         {
             m_destinationRectangle = new Rectangle((int)(characterViewPosition.X - scale / 2.0f), (int)(characterViewPosition.Y - scale), (int)scale, (int)scale);

@@ -9,18 +9,37 @@ namespace GameProj.Model
     class GetLevel
     {
 
-        // <summary>
-        /// Gets the strings from the needed textfile for Levels.
+        private const string FileLocationLevel1 = @"..\..\..\Level1.txt";
+        private const string FileLocationLevel2 = @"..\..\..\Level2.txt";
+        private const string FileLocationLevel3 = @"..\..\..\Level3.txt";
+
+
+
+        /// <summary>
+        /// Finds the textfile locations of the levels.
         /// </summary>
-        /// <param name="level"></param>
-        public static string GetLevels(int level)
+        /// <param name="currentLevel"></param>
+        /// <returns></returns>
+        private string FindLevelLocation(int currentLevel)
         {
-            
-            string levelSource = String.Format(@"..\..\..\Level{0}.txt", level);
-            string fullSource = System.IO.Path.GetFullPath(levelSource);
+            if (currentLevel == 1)
+                return System.IO.Path.GetFullPath(FileLocationLevel1);
+            else if (currentLevel == 2)
+                return System.IO.Path.GetFullPath(FileLocationLevel2);
+            else if (currentLevel == 3)
+                return System.IO.Path.GetFullPath(FileLocationLevel3);
+
+
+            throw new ArgumentException("Could not find the right path for current level Textfile!");
+        }
+
+        public string GetLevels(int level)
+        {
+
+            string FileLocation = FindLevelLocation(level);
             bool levelStrings = false;
 
-            using (StreamReader reader = new StreamReader(fullSource))
+            using (StreamReader reader = new StreamReader(FileLocation))
             {
                 string levelString = reader.ReadToEnd();
 
@@ -48,5 +67,10 @@ namespace GameProj.Model
                 return levelString;
             }
         }
+
+       
+
+
+
     }
 }

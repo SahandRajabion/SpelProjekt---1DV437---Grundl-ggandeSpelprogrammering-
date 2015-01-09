@@ -94,6 +94,29 @@ namespace GameProj.Controller
 
         }
 
+
+        /// <summary>
+        /// Updates the final screen when the game is done.
+        /// </summary>
+        /// <param name="keyboard"></param>
+        internal void UpdateGameOver(KeyboardState keyboard)
+        {
+
+            if (keyboard.IsKeyDown(Keys.Enter))
+            {
+                oldKeyboardState = keyboard;
+            }
+            else if (keyboard.IsKeyUp(Keys.Enter) && oldKeyboardState.IsKeyDown(Keys.Enter))
+            {
+                oldKeyboardState = new KeyboardState();
+                gameState = GameState.StartScreen;
+            }
+
+
+        }
+
+
+
         /// <summary>
         /// Draws the starting screen.
         /// </summary>

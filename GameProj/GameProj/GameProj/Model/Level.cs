@@ -15,8 +15,11 @@ namespace GameProj.Model
         public Tile[,] m_tiles = new Tile[g_levelWidth, g_levelHeight];
 
         private char m_filled = 'x';
-        //private char m_spriteStart = 's';
-        //private char m_space = 'g';
+        private char m_tile = 'y';
+        private char m_flag = 'f';
+       
+        private char m_sun = 's';
+        private char m_Enemy = 'e';
 
         Character character;
         private string  m_currentLevel;
@@ -27,7 +30,12 @@ namespace GameProj.Model
         {
             NONE = 0,
             FILLED,
-            GAP
+            GAP,
+            SUN,
+            ENEMY1,
+            TILE,
+            FLAG
+            
         };
 
     
@@ -52,16 +60,28 @@ namespace GameProj.Model
                         m_tiles[x, y] = Tile.FILLED;
                     }
 
-                 /*   else if (m_currentLevel[tile] == m_space)
+                    else if (m_currentLevel[tile] == m_sun)
                     {
-                        m_tiles[x, y] = Tile.GAP;
+                        m_tiles[x, y] = Tile.SUN;
                     }
 
-                    else if (m_currentLevel[tile] == m_spriteStart)
+                    else  if (m_currentLevel[tile] == m_Enemy)
                     {
                      
-                        m_tiles[x, y] = Tile.NONE;
-                    }*/
+                        m_tiles[x, y] = Tile.ENEMY1;
+                    }
+
+                    else  if (m_currentLevel[tile] == m_tile)
+                    {
+
+                        m_tiles[x, y] = Tile.TILE;
+                    }
+
+                    else if (m_currentLevel[tile] == m_flag)
+                    {
+
+                        m_tiles[x, y] = Tile.FLAG;
+                    }
 
                    
                     else
@@ -80,30 +100,30 @@ namespace GameProj.Model
         /// Checks if character sprite has collided with a Gap(if died).
         /// </summary>
         /// <param name="a_position"></param>
-        /// <param name="a_size"></param>
+        /// <param name="characterSize"></param>
         /// <returns></returns>
-        public bool CheckTileGapCollision(Vector2 a_position, Vector2 a_size)
+        public bool CheckTileEnemyCollision(Vector2 characterPosition, Vector2 characterSize)
         {
 
-            Vector2 bottomRightPostion = new Vector2(a_position.X + a_size.X / 2.0f, a_position.Y);
+            Vector2 bottomRightPostionOfCharacter = new Vector2(characterPosition.X + characterSize.X / 2.0f, characterPosition.Y);
 
             for (int x = 0; x < g_levelWidth; x++)
             {
                 for (int y = 0; y < g_levelHeight; y++)
                 {
-                    if (bottomRightPostion.X < (float)x)
+                    if (bottomRightPostionOfCharacter.X < (float)x)
                         continue;
-                    if (bottomRightPostion.Y < (float)y)
-                        continue;
-
-                    Vector2 topLeftPosition = new Vector2(a_position.X - a_size.X / 2.0f, a_position.Y - a_size.Y);
-
-                    if (topLeftPosition.X > (float)x + 1.0f)
-                        continue;
-                    if (topLeftPosition.Y > (float)y + 1.0f)
+                    if (bottomRightPostionOfCharacter.Y < (float)y)
                         continue;
 
-                    if (m_tiles[x, y] == Tile.GAP)
+                    Vector2 topLeftPositionOfCharacter = new Vector2(characterPosition.X - characterSize.X / 2.0f, characterPosition.Y - characterSize.Y);
+
+                    if (topLeftPositionOfCharacter.X > (float)x + 1.0f)
+                        continue;
+                    if (topLeftPositionOfCharacter.Y > (float)y + 1.0f)
+                        continue;
+
+                    if (m_tiles[x, y] == Tile.ENEMY1)
                     {
                         return true;
                     }
@@ -114,12 +134,7 @@ namespace GameProj.Model
         }
 
 
-       /* public Vector2 StartPosition
-        {
-            get;
-            set;
-        }
-        */
+    
         /// <summary>
         /// Checks the collision between the player and the map tiles.
         /// </summary>
@@ -135,7 +150,7 @@ namespace GameProj.Model
                     FloatRectangle rect = FloatRectangle.createFromTopLeft(new Vector2(x, y), tileSize);
                     if (a_rect.isIntersecting(rect))
                     {
-                        if (m_tiles[x, y] == Tile.FILLED)
+                        if (m_tiles[x, y] == Tile.FILLED || m_tiles[x, y] == Tile.TILE)
                         {
                             return true;
                         }

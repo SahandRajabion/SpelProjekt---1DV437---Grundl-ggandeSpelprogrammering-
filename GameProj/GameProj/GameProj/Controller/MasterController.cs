@@ -29,7 +29,7 @@ namespace GameProj
         private Level level;
         private GetLevel getLevel;
 
-        private Song jumpSound;
+        private SoundEffect jumpSound;
         private Song song;
        
         KeyboardState keyboardState;
@@ -84,10 +84,13 @@ namespace GameProj
             menuController = new MenuController(new MenuView(GraphicsDevice, Content));
             pausController = new PausController(pausView);
 
-            jumpSound = Content.Load<Song>("jumping");
-            song = Content.Load<Song>("music");
+            jumpSound = Content.Load<SoundEffect>("jumping");
 
-            
+            song = Content.Load<Song>("music");
+            MediaPlayer.Play(song);
+            MediaPlayer.Volume = 0.2f;
+            SoundEffect.MasterVolume = 0.5f;
+
            
             
         }
@@ -121,12 +124,11 @@ namespace GameProj
             {
                 menuController.UpdateStartScreen(keyboardState);
                 gamestate = menuController.GameState;
-                
+             
               
                 if (gamestate == GameState.InGame)
                 {
-                  
-                    //audio.PlayMusic();
+                   
                     menuController.GameState = GameState.BetweenLevels;
                 }
                 
@@ -143,7 +145,7 @@ namespace GameProj
                 {
                     Currentlevel += 1;
                  
-                    //audio.PlayMusic();
+                   
                     m_model = new Model.Model(getLevel.GetLevels(Currentlevel));
                     getLevel.GetLevels(Currentlevel);
                     m_model.GetLevel.ReadLevel();
@@ -166,27 +168,29 @@ namespace GameProj
             if (keyboardState.IsKeyDown(Keys.P))
             {
                 gamestate = GameState.GamePaused;
-                //audio.StopMusic();
+                
             }
 
            
             //OM SPELET ÄR PAUSAD.
             if (gamestate == GameState.GamePaused)
             {
+                MediaPlayer.Pause();
                 pausController.UpdatePauseScreen(keyboardState);
                 gamestate = pausController.GameState;
                 
                 if (gamestate == GameState.InGame)
                 {
+                    MediaPlayer.Resume();
                     pausController.GameState = GameState.GamePaused;
-                   // audio.PlayMusic();
+              
                 }
             }
 
                 // I SPELET
                 if (gamestate == GameState.InGame)
                 {
-                    //MediaPlayer.Play(song);
+
 
                     //Containing Boolian Value = If player pressed Right button (True/False)
                     bool RightMove = characterView.PressedRight();
@@ -207,7 +211,8 @@ namespace GameProj
                         // audio.StopMusic();
                     }
                         //Om spelaren fortfarande lever...
-                     else if(m_model.characterPosition().Y > Level.g_levelHeight){
+                    else if (m_model.characterPosition().Y > Level.g_levelHeight || level.CheckTileEnemyCollision(character.Position, character.Size))
+                    {
 
                         m_model.StartGame();              
                     }
@@ -238,7 +243,7 @@ namespace GameProj
                         if (m_model.CanPlayerJump())
                         {
                             m_model.Jump();
-                            MediaPlayer.Play(jumpSound);
+                            jumpSound.Play();
                             MediaPlayer.Volume = 0.5f;
                         }
                     }
@@ -252,6 +257,22 @@ namespace GameProj
                     
                     m_model.Update(elapsedTimeSeconds);
 
+
+                    if (gamestate == GameState.GameFinished)
+                    {
+
+                        Currentlevel = 0;
+                        menuController.UpdateGameEnd(keyboardState);
+                        gamestate = menuController.GameState;
+
+                        if (gamestate == GameState.StartScreen)
+                        {
+                            menuController.UpdateStartScreen(keyboardState);
+                            gamestate = menuController.GameState;
+
+                        }
+
+                    }
           
                     if (m_model.levelCompleted)
                     {
@@ -272,29 +293,22 @@ namespace GameProj
                 }
 
 
-                if (gamestate == GameState.GameFinished)
-                {
-                  
-                    Currentlevel = 0;
-                    menuController.UpdateGameEnd(keyboardState);
-                    gamestate = menuController.GameState;
-                }
 
                     if (gamestate == GameState.GameOver) {
-
-                       
+                        MediaPlayer.Stop();
+                           Currentlevel = 0;
                             menuController.GameState = GameState.GameOver;
-                            menuController.UpdateStartScreen(keyboardState);
+                            menuController.UpdateGameOver(keyboardState);
                             gamestate = menuController.GameState;
                           
                         if (gamestate == GameState.InGame)
                             {
-                                //audio.PlayMusic();
+                                
                              
                                 character.ResetCharacterHealth();
                                 m_model.RestartGame();
-                                
-                                menuController.GameState = GameState.BetweenLevels;
+                                menuController.UpdateStartScreen(keyboardState);
+                                gamestate = menuController.GameState;
                             }
                         }
                     

@@ -20,6 +20,10 @@ namespace GameProj.View
         private Texture2D m_tileTexture;
         private Texture2D m_BoxTexture;
         private Texture2D m_BackTexture;
+        private Texture2D m_SunTexture;
+        private Texture2D m_Tile;
+        private Texture2D m_EnemyLevel2Texture;
+        private Texture2D m_Flag;
         private SpriteFont lifeSprite;
         private Model.Model model;
 
@@ -29,7 +33,10 @@ namespace GameProj.View
          
             CharacterTexture = Content.Load<Texture2D>("player");
             m_BackTexture = Content.Load<Texture2D>("trans");
-
+            m_SunTexture = Content.Load<Texture2D>("sun");
+            m_EnemyLevel2Texture = Content.Load<Texture2D>("angrySun");
+            m_Tile = Content.Load<Texture2D>("tile1");
+            m_Flag = Content.Load<Texture2D>("arrow"); 
 
             m_BoxTexture = Content.Load<Texture2D>("cloud1");
             lifeSprite = Content.Load<SpriteFont>("levelTime");
@@ -47,8 +54,7 @@ namespace GameProj.View
         public enum Movement
         {
             RIGHTMOVE = 0,
-            LEFTMOVE,
-            STANDING
+            LEFTMOVE
 
         };
 
@@ -106,7 +112,7 @@ namespace GameProj.View
         /// <param name="playerPosition"></param>
         internal void DrawMap(Viewport viewport, Camera m_camera, Model.Level level, Vector2 playerPosition)
         {
-            DrawLife(character);
+            
             Vector2 viewPortSize = new Vector2(viewport.Width, viewport.Height);
             float scale = m_camera.GetScale();
 
@@ -118,13 +124,14 @@ namespace GameProj.View
                 {
                     Vector2 viewPosition = m_camera.GetViewPosition(x, y, viewPortSize);
                     DrawTile(viewPosition.X, viewPosition.Y, level.m_tiles[x, y], scale);
+                   
                 }
             }
-
+ 
             Vector2 characterViewPosition = m_camera.GetViewPosition(playerPosition.X, playerPosition.Y, viewPortSize);
             DrawCharacterPos(characterViewPosition, scale);
             spriteBatch.End();
-
+            DrawLife(character);
         }
 
         /// <summary>
@@ -157,6 +164,27 @@ namespace GameProj.View
                 m_tileTexture = m_BoxTexture;
             }
 
+            else if (tile == Level.Tile.SUN)
+            {
+                m_tileTexture = m_SunTexture;
+            }
+
+            else if (tile == Level.Tile.ENEMY1)
+            {
+                m_tileTexture = m_EnemyLevel2Texture;
+            }
+           
+            else if (tile == Level.Tile.TILE)
+            {
+                m_tileTexture = m_Tile;
+            }
+
+            else if (tile == Level.Tile.FLAG)
+            {
+                m_tileTexture = m_Flag;
+            }
+
+
             else
             {
                 m_tileTexture = m_BackTexture;
@@ -169,7 +197,7 @@ namespace GameProj.View
 
 
         /// <summary>
-        /// Draws the character position.
+        /// Draws the character.
         /// </summary>
         /// <param name="characterViewPosition"></param>
         /// <param name="scale"></param>

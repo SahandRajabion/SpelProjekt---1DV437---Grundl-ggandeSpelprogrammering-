@@ -22,14 +22,11 @@ C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\obj\x86\Debug\GameProj.csproj
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\background.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\backgroundxna.xnb
-C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tile.xnb
-C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\EmptyTile.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\bg2.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\space.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\spaceman.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\rsz_spaceman.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.xnb
-C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.wma
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.mp3
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\asteroid.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\gohan.xnb
@@ -42,7 +39,6 @@ C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\startin
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloudTile.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloud1.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.xnb
-C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.wma
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\PausScreen.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\landscape.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\latest.xnb
@@ -51,3 +47,9 @@ C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\Level3.
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\GameFinished.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\levelTime.xnb
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\GameOver.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sun.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sun2.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\angrySun.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\flag.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\arrow.xnb
+C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.wma

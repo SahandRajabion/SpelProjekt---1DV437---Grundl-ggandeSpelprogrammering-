@@ -61,20 +61,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="tile.png">
-      <Name>tile</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="EmptyTile.png">
-      <Name>EmptyTile</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="bg2.jpg">
       <Name>bg2</Name>
       <Importer>TextureImporter</Importer>
@@ -106,7 +92,7 @@
     <Compile Include="jumping.mp3">
       <Name>jumping</Name>
       <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
+      <Processor>SoundEffectProcessor</Processor>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
@@ -239,6 +225,39 @@
   <ItemGroup>
     <Compile Include="GameOver.jpg">
       <Name>GameOver</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="sun.png">
+      <Name>sun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="sun2.png">
+      <Name>sun2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="angrySun.png">
+      <Name>angrySun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="flag.jpg">
+      <Name>flag</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="arrow.png">
+      <Name>arrow</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

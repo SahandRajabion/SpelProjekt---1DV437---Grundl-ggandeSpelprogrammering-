@@ -2,13 +2,10 @@ Content\player.xnb
 Content\sound.xnb
 Content\background.xnb
 Content\backgroundxna.xnb
-Content\tile.xnb
-Content\EmptyTile.xnb
 Content\bg2.xnb
 Content\space.xnb
 Content\spaceman.xnb
 Content\rsz_spaceman.xnb
-Content\jumping.xnb
 Content\asteroid.xnb
 Content\gohan.xnb
 Content\trans.xnb
@@ -19,7 +16,6 @@ Content\mE7ZNU1419698481.xnb
 Content\startingScreen.xnb
 Content\cloudTile.xnb
 Content\cloud1.xnb
-Content\music.xnb
 Content\PausScreen.xnb
 Content\landscape.xnb
 Content\latest.xnb
@@ -28,8 +24,14 @@ Content\Level3.xnb
 Content\GameFinished.xnb
 Content\levelTime.xnb
 Content\GameOver.xnb
+Content\sun.xnb
+Content\sun2.xnb
+Content\angrySun.xnb
+Content\flag.xnb
+Content\arrow.xnb
+Content\jumping.xnb
+Content\music.xnb
 Content\sound.wma
-Content\jumping.wma
 Content\music.wma
 Content\player.png
 Content\sound.mp3

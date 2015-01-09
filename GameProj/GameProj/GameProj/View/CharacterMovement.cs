@@ -16,8 +16,8 @@ namespace GameProj
 
         Texture2D spriteTexture;
        
-        float timer = 0f;
-        float interval = 200f;
+        float timeElapsed = 0f;
+        float delay = 150f;
         int currentFrame = 0;
       
         //TODO: Koppla till camera Skala om
@@ -26,7 +26,7 @@ namespace GameProj
      
         Rectangle sourceRect;
         Vector2 position;
-        Vector2 origin;
+      
 
         KeyboardState currentKeyboardState;
         KeyboardState previousKeyboardState;
@@ -44,9 +44,6 @@ namespace GameProj
         }
 
 
-        /// <summary>
-        /// Get&Set the texture position.
-        /// </summary>
         public Vector2 Position
         {
             get { return position; }
@@ -54,32 +51,11 @@ namespace GameProj
         }
 
  
-        /*
-        public Vector2 Origin
-        {
-             get { return origin; }
-             set { origin = value; }
-        }
-
- 
-
-        public Texture2D Texture
-        {
-            get { return spriteTexture; }
-            set { spriteTexture = value; }
-        }
-        */
- 
-
         public Rectangle SourceRect
 
         {
-
             get { return sourceRect; }
-
             set { sourceRect = value; }
-
-
         }
 
 
@@ -90,32 +66,11 @@ namespace GameProj
 
             sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
 
-          /*  if (currentKeyboardState.GetPressedKeys().Length == 0)
-            {
-                if (currentFrame > 0 && currentFrame < 4)
-                {
-                    currentFrame = 0;
-                }
-                if (currentFrame > 4 && currentFrame < 8)
-                {
-                    currentFrame = 4;
-                }
-                if (currentFrame > 8 && currentFrame < 12)
-                {
-                    currentFrame = 8;
-                }
-                if (currentFrame > 12 && currentFrame < 16)
-                {
-                    currentFrame = 12;
-                }
-            }*/
-
-        
-
+         
             if (movement.Equals(GameProj.View.CharacterView.Movement.RIGHTMOVE))
             {
                 
-                if (position.X < 780)
+                if (position.X < 500)
                 {
                    
                     AnimateRight(timeElapsedMilliSeconds);
@@ -126,24 +81,12 @@ namespace GameProj
             {
                 {
                     
-                    if (position.X > 20)
+                    if (position.X > 10)
                     {
                         AnimateLeft(timeElapsedMilliSeconds);
                     }
                 }
 
-
-            if (movement.Equals(GameProj.View.CharacterView.Movement.STANDING))
-            {
-                if (currentFrame > 0 && currentFrame < 4)
-                {
-                    currentFrame = 0;
-                }
-
-                    
-            }
-
-                origin = new Vector2(sourceRect.Width / 2, sourceRect.Height / 2);
             }
         }
 
@@ -157,9 +100,9 @@ namespace GameProj
                 currentFrame = 9;
             }
 
-            timer += timeElapsedMilliSeconds;
+            timeElapsed += timeElapsedMilliSeconds;
 
-            if (timer > interval)
+            if (timeElapsed > delay)
             {
                 currentFrame++;
 
@@ -167,7 +110,8 @@ namespace GameProj
                 {
                     currentFrame = 8;
                 }
-                timer = 0f;
+
+                timeElapsed = 0f;
             }
         }
 
@@ -180,9 +124,9 @@ namespace GameProj
                 currentFrame = 5;
             }
 
-            timer += timeElapsedMilliSeconds;
+            timeElapsed += timeElapsedMilliSeconds;
 
-            if (timer > interval)
+            if (timeElapsed > delay)
             {
                 currentFrame++;
 
@@ -190,7 +134,7 @@ namespace GameProj
                 {
                     currentFrame = 4;
                 }
-                timer = 0f;
+                timeElapsed = 0f;
             }
         }
 

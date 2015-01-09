@@ -283,7 +283,7 @@ namespace GameProj.Model
         /// <returns>Returning players current lifes</returns>
         public int GetCurrentLifes()
         {
-            if (characterPosition().Y > Level.g_levelHeight)
+            if (characterPosition().Y > Level.g_levelHeight || m_level.CheckTileEnemyCollision(m_character.Position, m_character.Size))
             {
 
                 return m_character.m_characterHealth--;

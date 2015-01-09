@@ -39,24 +39,6 @@
       <Time>2014-12-24T20:12:24.1984368+01:00</Time>
     </Item>
     <Item>
-      <Source>tile.png</Source>
-      <Name>tile</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tile.xnb</Output>
-      <Time>2014-12-25T01:10:56.5475407+01:00</Time>
-    </Item>
-    <Item>
-      <Source>EmptyTile.png</Source>
-      <Name>EmptyTile</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\EmptyTile.xnb</Output>
-      <Time>2014-12-25T01:11:05.7110648+01:00</Time>
-    </Item>
-    <Item>
       <Source>bg2.jpg</Source>
       <Name>bg2</Name>
       <Importer>TextureImporter</Importer>
@@ -91,16 +73,6 @@
       <Options>None</Options>
       <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\rsz_spaceman.xnb</Output>
       <Time>2014-12-25T02:14:05.144236+01:00</Time>
-    </Item>
-    <Item>
-      <Source>jumping.mp3</Source>
-      <Name>jumping</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.xnb</Output>
-      <Extra>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.wma</Extra>
-      <Time>2014-12-25T02:28:05.0732772+01:00</Time>
     </Item>
     <Item>
       <Source>asteroid.png</Source>
@@ -193,16 +165,6 @@
       <Time>2014-12-27T17:52:53.5609686+01:00</Time>
     </Item>
     <Item>
-      <Source>music.mp3</Source>
-      <Name>music</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.xnb</Output>
-      <Extra>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.wma</Extra>
-      <Time>2014-12-28T02:17:49.9228613+01:00</Time>
-    </Item>
-    <Item>
       <Source>PausScreen.jpg</Source>
       <Name>PausScreen</Name>
       <Importer>TextureImporter</Importer>
@@ -273,6 +235,70 @@
       <Options>None</Options>
       <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\GameOver.xnb</Output>
       <Time>2015-01-03T03:56:03.6505976+01:00</Time>
+    </Item>
+    <Item>
+      <Source>sun.png</Source>
+      <Name>sun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sun.xnb</Output>
+      <Time>2015-01-09T06:47:13.164841+01:00</Time>
+    </Item>
+    <Item>
+      <Source>sun2.png</Source>
+      <Name>sun2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sun2.xnb</Output>
+      <Time>2015-01-09T06:47:13.2398453+01:00</Time>
+    </Item>
+    <Item>
+      <Source>angrySun.png</Source>
+      <Name>angrySun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\angrySun.xnb</Output>
+      <Time>2015-01-09T06:55:32.9644323+01:00</Time>
+    </Item>
+    <Item>
+      <Source>flag.jpg</Source>
+      <Name>flag</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\flag.xnb</Output>
+      <Time>2015-01-09T07:08:01.9772734+01:00</Time>
+    </Item>
+    <Item>
+      <Source>arrow.png</Source>
+      <Name>arrow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\arrow.xnb</Output>
+      <Time>2015-01-09T07:20:14.4021758+01:00</Time>
+    </Item>
+    <Item>
+      <Source>jumping.mp3</Source>
+      <Name>jumping</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.xnb</Output>
+      <Time>2014-12-25T02:28:05.0732772+01:00</Time>
+    </Item>
+    <Item>
+      <Source>music.mp3</Source>
+      <Name>music</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.xnb</Output>
+      <Extra>C:\Users\Sahand\Desktop\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.wma</Extra>
+      <Time>2014-12-28T02:17:49.9228613+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

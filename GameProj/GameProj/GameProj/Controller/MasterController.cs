@@ -28,20 +28,26 @@ namespace GameProj
         private Model.Model m_model;
         private Level level;
         private GetLevel getLevel;
+        private EnemyLine enemyLine;
 
         private SoundEffect jumpSound;
+        private SoundEffect fallingSmash;
+
         private Song song;
        
         KeyboardState keyboardState;
 
         MenuController menuController;
         PausController pausController;
-
+        float speed = 0.3f;
         public int Currentlevel = 1;
 
         GameState gamestate = GameState.StartScreen;
-   
-       
+
+        private Texture2D enemy;
+        private Rectangle enemyBounds;
+        //Vector2 enemyPosition;
+        //Vector2 enemyDefaultPosition;
        
 
         
@@ -66,6 +72,8 @@ namespace GameProj
             m_model = new Model.Model(getLevel.GetLevels(Currentlevel));
             level = new Level(getLevel.GetLevels(Currentlevel));
             base.Initialize();
+
+            
         }
 
         /// <summary>
@@ -77,6 +85,7 @@ namespace GameProj
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             character = new Character();
+            enemyLine = new EnemyLine();
             
             characterView = new CharacterView(GraphicsDevice, Content , m_model);
             pausView = new PausScreenView(GraphicsDevice, Content);
@@ -85,7 +94,13 @@ namespace GameProj
             pausController = new PausController(pausView);
 
             jumpSound = Content.Load<SoundEffect>("jumping");
+            fallingSmash = Content.Load<SoundEffect>("Smashing");
 
+            enemy = Content.Load<Texture2D>("line");
+            //enemyPosition = new Vector2(1, 1);
+          //  enemyDefaultPosition = new Vector2(1, 1);
+            
+            
             song = Content.Load<Song>("music");
             MediaPlayer.Play(song);
             MediaPlayer.Volume = 0.2f;
@@ -114,9 +129,16 @@ namespace GameProj
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
+            
             float elapsedTimeSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
             float elapsedTimeMilliSeconds = (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+
+
+
+            enemyBounds = new Rectangle((int)enemyLine.enemyPosition.X, (int)enemyLine.enemyPosition.Y, 50, 1000);
+
+
             keyboardState = Keyboard.GetState();
           
             //START SKÄRM
@@ -191,6 +213,14 @@ namespace GameProj
                 if (gamestate == GameState.InGame)
                 {
 
+                    if (Currentlevel == 3)
+                    {
+                        enemyLine.Update();
+                    }
+                 
+
+
+               
 
                     //Containing Boolian Value = If player pressed Right button (True/False)
                     bool RightMove = characterView.PressedRight();
@@ -208,13 +238,18 @@ namespace GameProj
                     if (m_model.IfDead() == true)
                     {
                         gamestate = GameState.GameOver;
-                        // audio.StopMusic();
+                       
                     }
                         //Om spelaren fortfarande lever...
-                    else if (m_model.characterPosition().Y > Level.g_levelHeight || level.CheckTileEnemyCollision(character.Position, character.Size))
+                    else if (m_model.characterPosition().Y > Level.g_levelHeight || characterView.m_destinationRectangle.Intersects(enemyBounds))
                     {
 
-                        m_model.StartGame();              
+
+                        m_model.StartGame();
+                        fallingSmash.Play();
+                        enemyLine.enemyPosition = enemyLine.enemyDefaultPosition;
+
+
                     }
                    
                     // Float funktion i spelet.
@@ -235,6 +270,12 @@ namespace GameProj
                     {
                         m_model.MoveLeft();
                         characterView.AnimateLeft(elapsedTimeMilliSeconds, CharacterView.Movement.LEFTMOVE);
+
+                        if (Currentlevel == 3)
+                        {
+
+                            enemyLine.enemyPosition.X += speed * 10.0f;
+                        }
                     }
 
                     //Spelare hoppar.
@@ -289,28 +330,36 @@ namespace GameProj
                         }
                         
                     }
+
+               
                           
-                }
+                    }
 
-
-
-                    if (gamestate == GameState.GameOver) {
+                    if (gamestate == GameState.GameOver)
+                    {
                         MediaPlayer.Stop();
-                           Currentlevel = 0;
-                            menuController.GameState = GameState.GameOver;
-                            menuController.UpdateGameOver(keyboardState);
+                        Currentlevel = 0;
+                        menuController.GameState = GameState.GameOver;
+                        menuController.UpdateGameOver(keyboardState);
+                        gamestate = menuController.GameState;
+
+                        if (gamestate == GameState.StartScreen)
+                        {
+                            menuController.UpdateStartScreen(keyboardState);
                             gamestate = menuController.GameState;
-                          
-                        if (gamestate == GameState.InGame)
+
+                            if (gamestate == GameState.InGame)
                             {
-                                
-                             
+
+
                                 character.ResetCharacterHealth();
                                 m_model.RestartGame();
-                                menuController.UpdateStartScreen(keyboardState);
-                                gamestate = menuController.GameState;
-                            }
+
                         }
+                    }
+                }
+
+              
                     
 
             base.Update(gameTime);
@@ -352,7 +401,7 @@ namespace GameProj
 
             if (gamestate == GameState.InGame)
             {
-              
+               
 
                 //Focus camera on player during the drawing.
                 m_camera.CenterOn(m_model.GetCharacter.Position, GraphicsDevice.Viewport,
@@ -361,9 +410,17 @@ namespace GameProj
                 menuController.DrawBackground();
                 //Draws current map
                 characterView.DrawMap(GraphicsDevice.Viewport, m_camera, m_model.GetLevel, m_model.GetCharacter.Position);
-            
+
+                if (Currentlevel == 3)
+                {
+                    spriteBatch.Begin();
+                    spriteBatch.Draw(enemy, enemyBounds, Color.White);
+                    spriteBatch.End();
+                }
             }
 
+
+           
            
             base.Draw(gameTime);
         }

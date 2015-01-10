@@ -79,6 +79,7 @@
     <Compile Include="Controller\GameStateEnum.cs" />
     <Compile Include="Controller\PausController.cs" />
     <Compile Include="Model\Collision.cs" />
+    <Compile Include="Model\EnemyLine.cs" />
     <Compile Include="Model\FloatRectangle.cs" />
     <Compile Include="Model\GetLevel.cs" />
     <Compile Include="Model\Level.cs" />

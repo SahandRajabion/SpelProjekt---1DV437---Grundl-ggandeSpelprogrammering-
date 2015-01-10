@@ -1,5 +1,4 @@
 Content\player.xnb
-Content\sound.xnb
 Content\background.xnb
 Content\backgroundxna.xnb
 Content\bg2.xnb
@@ -22,15 +21,18 @@ Content\latest.xnb
 Content\Level2.xnb
 Content\Level3.xnb
 Content\GameFinished.xnb
-Content\levelTime.xnb
 Content\GameOver.xnb
 Content\sun.xnb
 Content\sun2.xnb
 Content\angrySun.xnb
 Content\flag.xnb
 Content\arrow.xnb
+Content\line.xnb
+Content\sound.xnb
 Content\jumping.xnb
 Content\music.xnb
+Content\Smashing.xnb
+Content\levelTime.xnb
 Content\sound.wma
 Content\music.wma
 Content\player.png

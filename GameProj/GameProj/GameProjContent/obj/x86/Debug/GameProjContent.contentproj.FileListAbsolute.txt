@@ -1,2 +1,3 @@
 c:\users\sahand\documents\visual studio 2012\Projects\GameProj\GameProj\GameProjContent\obj\x86\Debug\GameProjContent.contentprojResolveAssemblyReference.cache
 C:\Users\Sahand\Desktop\GameProj\GameProj\GameProjContent\obj\x86\Debug\GameProjContent.contentprojResolveAssemblyReference.cache
+C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProjContent\obj\x86\Debug\GameProjContent.contentprojResolveAssemblyReference.cache

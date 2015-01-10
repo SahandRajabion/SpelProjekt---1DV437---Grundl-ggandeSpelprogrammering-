@@ -15,7 +15,7 @@ namespace GameProj.View
         CharacterMovement m_charMovement;
         SpriteBatch spriteBatch;
         Character character;
-        private Rectangle m_destinationRectangle;
+        public Rectangle m_destinationRectangle;
         
         private Texture2D m_tileTexture;
         private Texture2D m_BoxTexture;
@@ -201,7 +201,7 @@ namespace GameProj.View
         /// </summary>
         /// <param name="characterViewPosition"></param>
         /// <param name="scale"></param>
-        private void DrawCharacterPos(Vector2 characterViewPosition, float scale)
+        public void DrawCharacterPos(Vector2 characterViewPosition, float scale)
         {
             m_destinationRectangle = new Rectangle((int)(characterViewPosition.X - scale / 2.0f), (int)(characterViewPosition.Y - scale), (int)scale, (int)scale);
 

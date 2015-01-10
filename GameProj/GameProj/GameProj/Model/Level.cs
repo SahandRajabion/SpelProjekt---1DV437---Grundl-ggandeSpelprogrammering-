@@ -97,7 +97,7 @@ namespace GameProj.Model
 
         
         /// <summary>
-        /// Checks if character sprite has collided with a Gap(if died).
+        /// Checks if character sprite has collided with a Enemy(if died).
         /// </summary>
         /// <param name="a_position"></param>
         /// <param name="characterSize"></param>
@@ -154,6 +154,7 @@ namespace GameProj.Model
                         {
                             return true;
                         }
+                       
                     }
                 }
             }

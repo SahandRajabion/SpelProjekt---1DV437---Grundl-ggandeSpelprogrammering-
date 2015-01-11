@@ -103,3 +103,5 @@ C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\obj\x86\Debug\Gam
 C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\obj\x86\Debug\GameProj.pdb
 C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\enemyEagle.xnb
 C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\smoke.xnb
+C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\ssmoke.xnb
+C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloud.xnb

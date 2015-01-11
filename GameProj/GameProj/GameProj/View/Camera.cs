@@ -17,6 +17,7 @@ namespace GameProj.View
 
         public float XPosition = 0.5f;
         public float YPosition = 0.6f;
+        private Model.SmokeModel model;
 
 
         private Vector2 m_modelCenterPosition = new Vector2(0, 0);
@@ -25,6 +26,8 @@ namespace GameProj.View
 
         public Camera(Viewport port)
         {
+            model = new Model.SmokeModel();
+
             scaleX = port.Width - frame * 2;
             scaleY = port.Height - frame * 2;
 
@@ -53,7 +56,7 @@ namespace GameProj.View
         }
 
 
-
+        /*
         internal Microsoft.Xna.Framework.Rectangle translatRec(float x, float y, float p_3)
         {
             float vX = p_3 * scaleX;
@@ -64,11 +67,20 @@ namespace GameProj.View
 
             return new Microsoft.Xna.Framework.Rectangle(screenX, screenY, (int)(vX * 1f), (int)(vY * 1f));
         }
+        */
 
 
 
+        internal Rectangle translateRec(float X, float Y, float Size)
+        {
+            //Calculating the visual screen coordinates for the particles. 
+            float vx = Size * scaleX;
+            float vy = Size * scaleY;
 
-
+            int screenX = (int)((X * scaleX + model.XPosition) - vx);
+            int screenY = (int)((Y * scaleY + model.YPosition) - vy);
+            return new Rectangle(screenX, screenY, (int)(vx * 1f), (int)(vy * 1f));
+        }
 
 
 

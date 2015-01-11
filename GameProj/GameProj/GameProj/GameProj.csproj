@@ -85,6 +85,7 @@
     <Compile Include="Model\Level.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\Character.cs" />
+    <Compile Include="Model\SmokeModel.cs" />
     <Compile Include="View\MenuView.cs" />
     <Compile Include="View\Camera.cs" />
     <Compile Include="View\CharacterMovement.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="View\PausScreenView.cs" />
     <Compile Include="View\SmokeParticle.cs" />
     <Compile Include="View\SmokeSystem.cs" />
+    <Compile Include="View\SmokeView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

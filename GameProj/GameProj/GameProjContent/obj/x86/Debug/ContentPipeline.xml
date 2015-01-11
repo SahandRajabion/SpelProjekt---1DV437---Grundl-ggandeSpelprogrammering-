@@ -336,6 +336,24 @@
       <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\smoke.xnb</Output>
       <Time>2015-01-11T06:27:02.9310364+01:00</Time>
     </Item>
+    <Item>
+      <Source>ssmoke.png</Source>
+      <Name>ssmoke</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\ssmoke.xnb</Output>
+      <Time>2015-01-11T07:26:16.6093182+01:00</Time>
+    </Item>
+    <Item>
+      <Source>cloud.png</Source>
+      <Name>cloud</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloud.xnb</Output>
+      <Time>2015-01-11T07:31:49.8893808+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

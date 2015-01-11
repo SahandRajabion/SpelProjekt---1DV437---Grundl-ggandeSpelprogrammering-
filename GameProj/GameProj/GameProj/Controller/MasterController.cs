@@ -30,8 +30,7 @@ namespace GameProj
         private GetLevel getLevel;
         private EnemyLine enemyLine;
 
-        Texture2D smokeTexture;
-        SmokeSystem smokeSystem;
+        SmokeView smokeView;
 
         private SoundEffect jumpSound;
         private SoundEffect fallingSmash;
@@ -74,7 +73,6 @@ namespace GameProj
             level = new Level(getLevel.GetLevels(Currentlevel));
             base.Initialize();
 
-            smokeSystem = new SmokeSystem();
 
 
 
@@ -97,14 +95,14 @@ namespace GameProj
             menuController = new MenuController(new MenuView(GraphicsDevice, Content));
             pausController = new PausController(pausView);
            
-            smokeTexture = Content.Load<Texture2D>("smoke");
             
             jumpSound = Content.Load<SoundEffect>("jumping");
             fallingSmash = Content.Load<SoundEffect>("Smashing");
 
             enemy = Content.Load<Texture2D>("line");
 
-            
+            smokeView = new View.SmokeView(GraphicsDevice, Content);
+
             song = Content.Load<Song>("music");
             MediaPlayer.Play(song);
             MediaPlayer.Volume = 0.2f;
@@ -449,16 +447,17 @@ namespace GameProj
                     spriteBatch.Begin();
                     spriteBatch.Draw(enemy, enemyBounds, Color.White);
                     spriteBatch.End();
+                    smokeView.draw((float)gameTime.ElapsedGameTime.TotalSeconds);
                 }
 
 
-                
 
 
-                
-             
-                    smokeSystem.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
-                    smokeSystem.Draw(spriteBatch, smokeTexture, m_camera);
+                if(Currentlevel==2)
+                {
+                smokeView.draw((float)gameTime.ElapsedGameTime.TotalSeconds);
+                }
+                    
                 
               
             }

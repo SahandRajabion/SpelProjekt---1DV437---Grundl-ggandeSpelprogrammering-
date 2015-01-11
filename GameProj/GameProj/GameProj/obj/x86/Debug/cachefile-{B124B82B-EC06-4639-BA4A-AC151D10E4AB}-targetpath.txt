@@ -35,6 +35,8 @@ Content\music.xnb
 Content\music.wma
 Content\Smashing.xnb
 Content\levelTime.xnb
+Content\enemyEagle.xnb
+Content\smoke.xnb
 Content\player.png
 Content\sound.mp3
 Content\jumping.mp3

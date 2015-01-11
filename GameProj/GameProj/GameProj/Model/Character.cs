@@ -11,7 +11,7 @@ namespace GameProj.Model
         
         private Vector2 m_gravity;
         public int m_characterHealth = 3;
-        private Vector2 m_modelPosition;
+        public Vector2 m_modelPosition;
         private Vector2 m_velocity;
         private Vector2 m_defaultPosition;
     

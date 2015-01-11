@@ -101,3 +101,5 @@ C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\obj\x86\Debug\Gam
 C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\obj\x86\Debug\GameProj.exe
 C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\obj\x86\Debug\GameProj.pdb
+C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\enemyEagle.xnb
+C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\smoke.xnb

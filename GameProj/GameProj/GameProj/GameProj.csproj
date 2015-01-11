@@ -93,6 +93,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="View\CharacterView.cs" />
     <Compile Include="View\PausScreenView.cs" />
+    <Compile Include="View\SmokeParticle.cs" />
+    <Compile Include="View\SmokeSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

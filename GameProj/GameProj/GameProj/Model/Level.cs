@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GameProj.View;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,8 @@ namespace GameProj.Model
         private char m_Enemy = 'e';
 
         Character character;
+      
+
         private string  m_currentLevel;
 
      
@@ -102,35 +105,26 @@ namespace GameProj.Model
         /// <param name="a_position"></param>
         /// <param name="characterSize"></param>
         /// <returns></returns>
-        public bool CheckTileEnemyCollision(Vector2 characterPosition, Vector2 characterSize)
+       public bool CheckTileSunEnemyCollision(FloatRectangle a_rect)
         {
-
-            Vector2 bottomRightPostionOfCharacter = new Vector2(characterPosition.X + characterSize.X / 2.0f, characterPosition.Y);
-
+            Vector2 tileSize = new Vector2(1, 1);
             for (int x = 0; x < g_levelWidth; x++)
             {
                 for (int y = 0; y < g_levelHeight; y++)
                 {
-                    if (bottomRightPostionOfCharacter.X < (float)x)
-                        continue;
-                    if (bottomRightPostionOfCharacter.Y < (float)y)
-                        continue;
-
-                    Vector2 topLeftPositionOfCharacter = new Vector2(characterPosition.X - characterSize.X / 2.0f, characterPosition.Y - characterSize.Y);
-
-                    if (topLeftPositionOfCharacter.X > (float)x + 1.0f)
-                        continue;
-                    if (topLeftPositionOfCharacter.Y > (float)y + 1.0f)
-                        continue;
-
-                    if (m_tiles[x, y] == Tile.ENEMY1)
+                    FloatRectangle rect = FloatRectangle.createFromTopLeft(new Vector2(x, y), tileSize);
+                    if (a_rect.isIntersecting(rect))
                     {
-                        return true;
+                        if (m_tiles[x, y] == Tile.ENEMY1)
+                        {
+                            return true;
+                        }
+
                     }
                 }
             }
-
             return false;
+           
         }
 
 

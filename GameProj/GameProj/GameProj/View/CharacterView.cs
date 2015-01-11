@@ -26,6 +26,8 @@ namespace GameProj.View
         private Texture2D m_Flag;
         private SpriteFont lifeSprite;
         private Model.Model model;
+        public Rectangle destinationRectangle;
+        public Rectangle rec;
 
         public CharacterView(GraphicsDevice GraphicsDevice, ContentManager Content, Model.Model m_model)
         {
@@ -190,7 +192,8 @@ namespace GameProj.View
                 m_tileTexture = m_BackTexture;
             }
 
-            Rectangle destinationRectangle = new Rectangle((int)x, (int)y, (int)scale, (int)scale);
+            rec = new Rectangle(m_tileTexture.Width, m_tileTexture.Height, (int)x, (int)y);
+             destinationRectangle = new Rectangle((int)x, (int)y, (int)scale, (int)scale);
 
             spriteBatch.Draw(m_tileTexture, destinationRectangle, Color.White);
         }

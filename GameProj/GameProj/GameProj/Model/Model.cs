@@ -14,7 +14,7 @@ namespace GameProj.Model
         bool m_collidedWithGround = false;
         public static int Currentlevel = 0;
         public bool levelCompleted;
-
+        Vector2 newPosition;
 
 
         public Model(string levelString)
@@ -91,11 +91,13 @@ namespace GameProj.Model
             
             //Get the new character position.
             m_character.Update(totalElapsedSeconds);
-            Vector2 newPosition = m_character.Position;
+             newPosition = m_character.Position;
 
             
             m_collidedWithGround = false;
             Vector2 velocity = m_character.Velocity;
+           
+            
 
             //Updates the collision detail 
             if (didCollide(newPosition, m_character.Size))
@@ -113,6 +115,16 @@ namespace GameProj.Model
         }
 
 
+        public bool checkSunEnemyCollision() {
+
+            FloatRectangle occupiedArea = FloatRectangle.createFromCenterBottom(newPosition, m_character.Size);
+
+            if (m_level.CheckTileSunEnemyCollision(occupiedArea)) {
+
+                return true;
+            }
+            return false;
+        }
         /// <summary>
         /// Returns the updated character position.
         /// </summary>
@@ -156,24 +168,6 @@ namespace GameProj.Model
         }
 
 
-        
-        /// <summary>
-        /// Decides if the character is dead or has any life left.
-        /// </summary>
-        /// <returns></returns>
-        public bool IfDead()
-        {
-          int left = GetCurrentLifes();
-            
-            if ( left <= 0)
-            {
-                return true;
-            }
-
-            return false;
-        }
-            
-            
  
         /// <summary>
         /// Checks if any Collision has happend.
@@ -184,6 +178,7 @@ namespace GameProj.Model
         private bool didCollide(Vector2 a_centerBottom, Vector2 a_size)
         {
             FloatRectangle occupiedArea = FloatRectangle.createFromCenterBottom(a_centerBottom, a_size);
+           
             if (m_level.IsCollidingAt(occupiedArea))
             {
                 return true;
@@ -274,7 +269,21 @@ namespace GameProj.Model
         }
 
 
-       
+        /// <summary>
+        /// Decides if the character is dead or has any life left.
+        /// </summary>
+        /// <returns></returns>
+        public bool IfDead()
+        {
+            int left = GetCurrentLifes();
+
+            if (left <= 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
 
 
         /// <summary>
@@ -283,7 +292,7 @@ namespace GameProj.Model
         /// <returns>Returning players current lifes</returns>
         public int GetCurrentLifes()
         {
-            if (characterPosition().Y > Level.g_levelHeight || m_level.CheckTileEnemyCollision(m_character.Position, m_character.Size))
+            if (characterPosition().Y > Level.g_levelHeight || checkSunEnemyCollision() )
             {
 
                 return m_character.m_characterHealth--;
@@ -300,6 +309,35 @@ namespace GameProj.Model
 
         }
 
+
+
+       internal int checkLineEnemyCollision(Rectangle enemyBounds, Rectangle character)
+       {
+           if (character.Intersects(enemyBounds)) { 
+        
+            return m_character.m_characterHealth--;
+
+            }
+
+            return Lifes();
+           
+           }
+
+       public bool checkLineDeath(Rectangle enemyBounds, Rectangle character) { 
+       
      
-    }
-}
+        
+            if (checkLineEnemyCollision(enemyBounds,character) <= 0 )
+            {
+                return true;
+            }
+
+            return false;
+        }
+       
+       
+       }
+  }
+    
+
+

@@ -9,20 +9,69 @@ namespace GameProj.View
 {
     class Camera
     {
+        private float scale;
+        private float scaleX;
+        private float scaleY;
+        private static int frame = 12;
+
+
+        public float XPosition = 0.5f;
+        public float YPosition = 0.6f;
+
 
         private Vector2 m_modelCenterPosition = new Vector2(0, 0);
 
         private float m_scale = 60.0f;
 
-        public Camera()
+        public Camera(Viewport port)
         {
-            
+            scaleX = port.Width - frame * 2;
+            scaleY = port.Height - frame * 2;
+
+
+
+            scale = scaleX;
+            if (scaleY < scaleX)
+            {
+                scale = scaleY;
+            }
         }
 
         public float GetScale()
         {
             return m_scale;
         }
+
+        public float ToVisualX(float posX)
+        {
+            return scale * posX;
+        }
+
+        public float ToVisualY(float posY)
+        {
+            return scale * posY;
+        }
+
+
+
+        internal Microsoft.Xna.Framework.Rectangle translatRec(float x, float y, float p_3)
+        {
+            float vX = p_3 * scaleX;
+            float vY = p_3 * scaleY;
+
+            int screenX = (int)((x * scaleX + XPosition) - vX);
+            int screenY = (int)((y * scaleY + YPosition) - vY);
+
+            return new Microsoft.Xna.Framework.Rectangle(screenX, screenY, (int)(vX * 1f), (int)(vY * 1f));
+        }
+
+
+
+
+
+
+
+
 
         public Vector2 GetViewPosition(float x, float y, Vector2 viewScreenSize)
         {
@@ -70,7 +119,6 @@ namespace GameProj.View
         }
 
 
-     
 
     }
 }

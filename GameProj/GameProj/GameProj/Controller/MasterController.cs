@@ -30,11 +30,15 @@ namespace GameProj
         private GetLevel getLevel;
         private EnemyLine enemyLine;
 
+        Texture2D smokeTexture;
+        SmokeSystem smokeSystem;
+
         private SoundEffect jumpSound;
         private SoundEffect fallingSmash;
 
         private Song song;
-       
+
+        bool RunFaster;
         KeyboardState keyboardState;
 
         MenuController menuController;
@@ -46,12 +50,9 @@ namespace GameProj
 
         private Texture2D enemy;
         private Rectangle enemyBounds;
-        //Vector2 enemyPosition;
-        //Vector2 enemyDefaultPosition;
-       
 
-        
-    
+      
+
         public MasterController()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -68,12 +69,15 @@ namespace GameProj
         protected override void Initialize()
         {
 
-            m_camera = new Camera();
+            m_camera = new Camera(GraphicsDevice.Viewport);
             m_model = new Model.Model(getLevel.GetLevels(Currentlevel));
             level = new Level(getLevel.GetLevels(Currentlevel));
             base.Initialize();
 
-            
+            smokeSystem = new SmokeSystem();
+
+
+
         }
 
         /// <summary>
@@ -92,21 +96,21 @@ namespace GameProj
 
             menuController = new MenuController(new MenuView(GraphicsDevice, Content));
             pausController = new PausController(pausView);
-
+           
+            smokeTexture = Content.Load<Texture2D>("smoke");
+            
             jumpSound = Content.Load<SoundEffect>("jumping");
             fallingSmash = Content.Load<SoundEffect>("Smashing");
 
             enemy = Content.Load<Texture2D>("line");
-            //enemyPosition = new Vector2(1, 1);
-          //  enemyDefaultPosition = new Vector2(1, 1);
-            
+
             
             song = Content.Load<Song>("music");
             MediaPlayer.Play(song);
             MediaPlayer.Volume = 0.2f;
             SoundEffect.MasterVolume = 0.5f;
 
-           
+
             
         }
 
@@ -118,12 +122,16 @@ namespace GameProj
         {
             // TODO: Unload any non ContentManager content here
         }
+       
+        
+
 
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
+
         protected override void Update(GameTime gameTime)
         {
             // Allows the game to exit
@@ -136,8 +144,17 @@ namespace GameProj
 
 
 
-            enemyBounds = new Rectangle((int)enemyLine.enemyPosition.X, (int)enemyLine.enemyPosition.Y, 50, 1000);
 
+            
+
+
+
+
+
+
+
+
+            enemyBounds = new Rectangle((int)enemyLine.enemyPosition.X, (int)enemyLine.enemyPosition.Y, 50, 1000);
 
             keyboardState = Keyboard.GetState();
           
@@ -216,6 +233,8 @@ namespace GameProj
                     if (Currentlevel == 3)
                     {
                         enemyLine.Update();
+
+                        m_model.checkLineEnemyCollision(enemyBounds, characterView.m_destinationRectangle);
                     }
                  
 
@@ -227,7 +246,7 @@ namespace GameProj
                     //Containing Boolian Value = If player pressed Left button (True/False)
                     bool LeftMove = characterView.PressedLeft();
                     //Containing Boolian Value = If player pressed Run button (True/False)
-                    bool RunFaster = characterView.PressedRun();
+                     RunFaster = characterView.PressedRun();
                     //Containing Boolian Value = If player pressed Quit button (True/False)
                     bool Quit = characterView.PressedQuit();
                     //Containing Boolian Value = If player pressed Jump button (True/False)
@@ -235,7 +254,7 @@ namespace GameProj
 
                     
                     //Om spelaren är död...
-                    if (m_model.IfDead() == true)
+                    if (m_model.IfDead() == true || m_model.checkLineDeath(enemyBounds, characterView.m_destinationRectangle) == true)
                     {
                         gamestate = GameState.GameOver;
                        
@@ -244,14 +263,24 @@ namespace GameProj
                     else if (m_model.characterPosition().Y > Level.g_levelHeight || characterView.m_destinationRectangle.Intersects(enemyBounds))
                     {
 
+                  
+                        m_model.StartGame();
+                        fallingSmash.Play();
+                        enemyLine.enemyPosition = enemyLine.enemyDefaultPosition;
+                       
+                       
+
+                    }
+
+                    else if (m_model.checkSunEnemyCollision())
+                    {
 
                         m_model.StartGame();
                         fallingSmash.Play();
                         enemyLine.enemyPosition = enemyLine.enemyDefaultPosition;
-
-
                     }
-                   
+
+
                     // Float funktion i spelet.
                     if (RunFaster == true)
                     {
@@ -406,6 +435,10 @@ namespace GameProj
                 //Focus camera on player during the drawing.
                 m_camera.CenterOn(m_model.GetCharacter.Position, GraphicsDevice.Viewport,
                 new Vector2(Level.g_levelWidth, Level.g_levelHeight));
+
+           
+
+
                 //Draws game background
                 menuController.DrawBackground();
                 //Draws current map
@@ -417,11 +450,20 @@ namespace GameProj
                     spriteBatch.Draw(enemy, enemyBounds, Color.White);
                     spriteBatch.End();
                 }
+
+
+                
+
+
+                
+             
+                    smokeSystem.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
+                    smokeSystem.Draw(spriteBatch, smokeTexture, m_camera);
+                
+              
             }
 
 
-           
-           
             base.Draw(gameTime);
         }
     }

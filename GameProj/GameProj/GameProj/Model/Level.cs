@@ -10,7 +10,7 @@ namespace GameProj.Model
     class Level
     {
 
-        public const int g_levelWidth = 40;
+        public const int g_levelWidth = 80;
         public const int g_levelHeight = 15;
 
         public Tile[,] m_tiles = new Tile[g_levelWidth, g_levelHeight];
@@ -21,6 +21,17 @@ namespace GameProj.Model
        
         private char m_sun = 's';
         private char m_Enemy = 'e';
+        private char m_TileBlock = 't';
+        private char m_TileBlock2 = 'l';
+
+        private char m_Build1 = 'b';
+        private char m_Build2 = 'q';
+
+        private char m_Tower1 = '1';
+        private char m_Tower2 = '2';
+        private char m_Tower3 = '3';
+        private char m_Tower4 = '4';
+
 
         Character character;
       
@@ -37,7 +48,15 @@ namespace GameProj.Model
             SUN,
             ENEMY1,
             TILE,
-            FLAG
+            FLAG,
+            TOWER1,
+            TOWER2,
+            TOWER3,
+            TOWER4,
+            TILEBLOCK,
+            TILEBLOCK2,
+            BUILD1,
+            BUILD2
             
         };
 
@@ -86,6 +105,52 @@ namespace GameProj.Model
                         m_tiles[x, y] = Tile.FLAG;
                     }
 
+                    else if (m_currentLevel[tile] == m_Tower1)
+                    {
+
+                        m_tiles[x, y] = Tile.TOWER1;
+                    }
+
+                    else if (m_currentLevel[tile] == m_Tower2)
+                    {
+
+                        m_tiles[x, y] = Tile.TOWER2;
+                    }
+                    else if (m_currentLevel[tile] == m_Tower3)
+                    {
+
+                        m_tiles[x, y] = Tile.TOWER3;
+                    }
+                    else if (m_currentLevel[tile] == m_Tower4)
+                    {
+
+                        m_tiles[x, y] = Tile.TOWER4;
+                    }
+
+                    else if (m_currentLevel[tile] == m_TileBlock)
+                    {
+
+                        m_tiles[x, y] = Tile.TILEBLOCK;
+                    }
+
+                    else if (m_currentLevel[tile] == m_TileBlock2)
+                    {
+
+                        m_tiles[x, y] = Tile.TILEBLOCK2;
+                    }
+
+                    else if (m_currentLevel[tile] == m_Build1)
+                    {
+
+                        m_tiles[x, y] = Tile.BUILD1;
+                    }
+
+                    else if (m_currentLevel[tile] == m_Build2)
+                    {
+
+                        m_tiles[x, y] = Tile.BUILD2;
+                    }
+                   
                    
                     else
                     {
@@ -144,7 +209,9 @@ namespace GameProj.Model
                     FloatRectangle rect = FloatRectangle.createFromTopLeft(new Vector2(x, y), tileSize);
                     if (a_rect.isIntersecting(rect))
                     {
-                        if (m_tiles[x, y] == Tile.FILLED || m_tiles[x, y] == Tile.TILE)
+                        if (m_tiles[x, y] == Tile.FILLED || m_tiles[x, y] == Tile.TILE || m_tiles[x, y] == Tile.TOWER4 || 
+                            m_tiles[x, y] == Tile.TOWER3 || m_tiles[x, y] == Tile.TOWER2 || m_tiles[x, y] == Tile.TOWER1 ||
+                            m_tiles[x, y] == Tile.TILEBLOCK || m_tiles[x, y] == Tile.TILEBLOCK2 || m_tiles[x, y] == Tile.BUILD1 || m_tiles[x, y] == Tile.BUILD2)
                         {
                             return true;
                         }

@@ -354,6 +354,114 @@
       <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloud.xnb</Output>
       <Time>2015-01-11T07:31:49.8893808+01:00</Time>
     </Item>
+    <Item>
+      <Source>TowerBottom.png</Source>
+      <Name>TowerBottom</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\TowerBottom.xnb</Output>
+      <Time>2015-01-12T04:11:22.27592+01:00</Time>
+    </Item>
+    <Item>
+      <Source>TowerMiddle.png</Source>
+      <Name>TowerMiddle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\TowerMiddle.xnb</Output>
+      <Time>2015-01-12T04:11:22.4639308+01:00</Time>
+    </Item>
+    <Item>
+      <Source>TowerMiddleTop.png</Source>
+      <Name>TowerMiddleTop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\TowerMiddleTop.xnb</Output>
+      <Time>2015-01-12T04:11:22.4689311+01:00</Time>
+    </Item>
+    <Item>
+      <Source>TowerTops.png</Source>
+      <Name>TowerTops</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\TowerTops.xnb</Output>
+      <Time>2015-01-12T04:11:22.4719313+01:00</Time>
+    </Item>
+    <Item>
+      <Source>test.png</Source>
+      <Name>test</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\test.xnb</Output>
+      <Time>2015-01-12T04:22:00.0864065+01:00</Time>
+    </Item>
+    <Item>
+      <Source>tiles2.jpg</Source>
+      <Name>tiles2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tiles2.xnb</Output>
+      <Time>2015-01-12T04:35:00.6080663+01:00</Time>
+    </Item>
+    <Item>
+      <Source>tileblock.jpg</Source>
+      <Name>tileblock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tileblock.xnb</Output>
+      <Time>2015-01-12T05:02:01.814817+01:00</Time>
+    </Item>
+    <Item>
+      <Source>tileblock2.jpg</Source>
+      <Name>tileblock2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tileblock2.xnb</Output>
+      <Time>2015-01-12T05:02:01.8188172+01:00</Time>
+    </Item>
+    <Item>
+      <Source>tileblock3.jpg</Source>
+      <Name>tileblock3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tileblock3.xnb</Output>
+      <Time>2015-01-12T05:02:01.8218174+01:00</Time>
+    </Item>
+    <Item>
+      <Source>tileblocks.JPG</Source>
+      <Name>tileblocks</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tileblocks.xnb</Output>
+      <Time>2015-01-12T05:19:05.9504036+01:00</Time>
+    </Item>
+    <Item>
+      <Source>build1.png</Source>
+      <Name>build1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\build1.xnb</Output>
+      <Time>2015-01-12T05:26:50.5869807+01:00</Time>
+    </Item>
+    <Item>
+      <Source>build2.png</Source>
+      <Name>build2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\build2.xnb</Output>
+      <Time>2015-01-12T05:26:50.5899809+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

@@ -14,7 +14,6 @@ namespace GameProj.View
         Texture2D CharacterTexture;
         CharacterMovement m_charMovement;
         SpriteBatch spriteBatch;
-        Character character;
         public Rectangle m_destinationRectangle;
         
         private Texture2D m_tileTexture;
@@ -29,6 +28,18 @@ namespace GameProj.View
         public Rectangle destinationRectangle;
         public Rectangle rec;
 
+        private Texture2D m_Tower1;
+        private Texture2D m_Tower2;
+        private Texture2D m_Tower3;
+        private Texture2D m_Tower4;
+        private Texture2D m_TileBlock;
+        private Texture2D m_TileBlock2;
+        private Texture2D m_Build1;
+        private Texture2D m_Build2;
+
+
+
+
         public CharacterView(GraphicsDevice GraphicsDevice, ContentManager Content, Model.Model m_model)
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -37,14 +48,27 @@ namespace GameProj.View
             m_BackTexture = Content.Load<Texture2D>("trans");
             m_SunTexture = Content.Load<Texture2D>("sun");
             m_EnemyLevel2Texture = Content.Load<Texture2D>("angrySun");
-            m_Tile = Content.Load<Texture2D>("tile1");
+            m_Tile = Content.Load<Texture2D>("tiles2");
+            m_TileBlock = Content.Load<Texture2D>("tileblock3");
+            m_TileBlock2 = Content.Load<Texture2D>("tileblocks");
+
+            m_Build1 = Content.Load<Texture2D>("build1");
+            m_Build2 = Content.Load<Texture2D>("build2");
+
             m_Flag = Content.Load<Texture2D>("arrow"); 
 
             m_BoxTexture = Content.Load<Texture2D>("cloud1");
             lifeSprite = Content.Load<SpriteFont>("levelTime");
 
+            m_Tower1 = Content.Load<Texture2D>("TowerTops");
+            m_Tower2 = Content.Load<Texture2D>("TowerMiddleTop");
+            m_Tower3 = Content.Load<Texture2D>("TowerMiddle");
+            m_Tower4 = Content.Load<Texture2D>("TowerBottom");
+
+
+
+
             this.model = m_model;
-            character = new Character();
            
             //TODO:Scale camera.
             //9= currentFrame, 32=  spriteWidth, 48= spriteHeight:  scale in camera.
@@ -133,14 +157,14 @@ namespace GameProj.View
             Vector2 characterViewPosition = m_camera.GetViewPosition(playerPosition.X, playerPosition.Y, viewPortSize);
             DrawCharacterPos(characterViewPosition, scale);
             spriteBatch.End();
-            DrawLife(character);
+            DrawLife();
         }
 
         /// <summary>
         /// Draws the current life left. 
         /// </summary>
         /// <param name="character"></param>
-        private void DrawLife(Character character)
+        private void DrawLife()
         {
             Vector2 position = new Vector2(5, 5);
 
@@ -186,6 +210,46 @@ namespace GameProj.View
                 m_tileTexture = m_Flag;
             }
 
+            else if (tile == Level.Tile.TOWER1)
+            {
+                m_tileTexture = m_Tower1;
+            }
+
+            else if (tile == Level.Tile.TOWER2)
+            {
+                m_tileTexture = m_Tower2;
+            }
+
+            else if (tile == Level.Tile.TOWER3)
+            {
+                m_tileTexture = m_Tower3;
+            }
+
+            else if (tile == Level.Tile.TOWER4)
+            {
+                m_tileTexture = m_Tower4;
+            }
+
+             else if (tile == Level.Tile.TILEBLOCK)
+            {
+                m_tileTexture = m_TileBlock;
+            }
+
+            else if (tile == Level.Tile.TILEBLOCK2)
+            {
+                m_tileTexture = m_TileBlock2;
+            }
+
+            else if (tile == Level.Tile.BUILD1)
+            {
+                m_tileTexture = m_Build1;
+            }
+
+            else if (tile == Level.Tile.BUILD2)
+            {
+                m_tileTexture = m_Build2;
+            }
+                
 
             else
             {

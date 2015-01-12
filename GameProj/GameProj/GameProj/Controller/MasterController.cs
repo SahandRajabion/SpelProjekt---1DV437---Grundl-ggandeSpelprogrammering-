@@ -141,17 +141,6 @@ namespace GameProj
 
 
 
-
-
-            
-
-
-
-
-
-
-
-
             enemyBounds = new Rectangle((int)enemyLine.enemyPosition.X, (int)enemyLine.enemyPosition.Y, 50, 1000);
 
             keyboardState = Keyboard.GetState();
@@ -447,13 +436,12 @@ namespace GameProj
                     spriteBatch.Begin();
                     spriteBatch.Draw(enemy, enemyBounds, Color.White);
                     spriteBatch.End();
-                    smokeView.draw((float)gameTime.ElapsedGameTime.TotalSeconds);
                 }
 
 
 
 
-                if(Currentlevel==2)
+                if(Currentlevel==2 || Currentlevel == 3)
                 {
                 smokeView.draw((float)gameTime.ElapsedGameTime.TotalSeconds);
                 }

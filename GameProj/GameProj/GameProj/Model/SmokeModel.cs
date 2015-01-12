@@ -20,7 +20,7 @@ namespace GameProj.Model
         public float startValue = 1.0f;
         public float endValue = 0.0f;
         public float totalTime = 0;
-        public float MaxTime = 17.0f;
+        public float MaxTime = 15.0f;
         public float XPosition = 0.5f;
         public float YPosition = 0.5f;
 

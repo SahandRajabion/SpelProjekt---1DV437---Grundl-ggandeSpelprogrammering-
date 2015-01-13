@@ -14,15 +14,25 @@ namespace GameProj.Model
         bool m_collidedWithGround = false;
         public static int Currentlevel = 0;
         public bool levelCompleted;
+        public bool isGameOver;
         Vector2 newPosition;
 
 
-        public Model(string levelString)
+        public Model()
         {
-            m_level = new Level(levelString);
+            m_level = new Level();
             m_character = new Character();
-          
+
         }
+
+
+
+        public void LoadLevel(string level)
+        {
+            m_level.ReadLevel(level);
+        }
+
+       
 
         /// <summary>
         /// Gets the current level.
@@ -129,7 +139,7 @@ namespace GameProj.Model
         /// Returns the updated character position.
         /// </summary>
         /// <returns></returns>
-        public Vector2 characterPosition() {
+        public Vector2 characterPosition( ) {
 
             return m_character.Position;
         
@@ -148,6 +158,7 @@ namespace GameProj.Model
         public Vector2 StartGame()
         {
             return m_character.Position = m_character.DefaultPosition();
+
             
         }
 
@@ -163,6 +174,8 @@ namespace GameProj.Model
             {
               
                 levelCompleted = true;
+                
+
             }
           
         }
@@ -275,9 +288,8 @@ namespace GameProj.Model
         /// <returns></returns>
         public bool IfDead()
         {
-            int left = GetCurrentLifes();
 
-            if (left <= 0)
+            if (GetCurrentLifes() <= 0)
             {
                 return true;
             }
@@ -285,6 +297,21 @@ namespace GameProj.Model
             return false;
         }
 
+
+        public void gameOver()
+        {
+
+            if (IfDead())
+            {
+                isGameOver = true;
+            }
+         
+            else
+            {
+                isGameOver = false;
+            }
+
+        }
 
         /// <summary>
         /// Lifes player has left 
@@ -295,33 +322,45 @@ namespace GameProj.Model
             if (characterPosition().Y > Level.g_levelHeight || checkSunEnemyCollision() )
             {
 
-                return m_character.m_characterHealth--;
+                return loseALife();
 
             }
 
-            return Lifes();
+            return m_character.Lifes;
         }
+
+
 
        public int Lifes()
         {
 
-            return m_character.m_characterHealth;
+            return m_character.Lifes;
 
         }
+
+
+       public int loseALife()
+       {
+           return m_character.Lifes -= 1;
+       }
+
 
 
 
        internal int checkLineEnemyCollision(Rectangle enemyBounds, Rectangle character)
        {
-           if (character.Intersects(enemyBounds)) { 
-        
-            return m_character.m_characterHealth--;
+
+           if (character.Intersects(enemyBounds)) {
+
+               return loseALife();
 
             }
 
-            return Lifes();
+           return m_character.Lifes;
            
            }
+
+
 
        public bool checkLineDeath(Rectangle enemyBounds, Rectangle character) { 
        
@@ -334,6 +373,13 @@ namespace GameProj.Model
 
             return false;
         }
+
+
+       public void ResetCharacterHealth()
+       {
+
+           m_character.ResetCharacterHealth();
+       }
        
        
        }

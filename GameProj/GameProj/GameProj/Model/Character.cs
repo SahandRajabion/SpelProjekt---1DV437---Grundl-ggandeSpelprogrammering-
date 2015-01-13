@@ -31,7 +31,7 @@ namespace GameProj.Model
         /// </summary>
         internal void ResetCharacterHealth()
         {
-             m_characterHealth = 3;
+            Lifes = 3;
         }
 
         /// <summary>
@@ -41,6 +41,19 @@ namespace GameProj.Model
         {
             get { return m_modelPosition; }
             set { m_modelPosition = value; }
+        }
+
+
+        public int Lifes
+        {
+            get
+            {
+                return m_characterHealth;
+            }
+            set
+            {
+                m_characterHealth = value;
+            }
         }
 
         /// <summary>

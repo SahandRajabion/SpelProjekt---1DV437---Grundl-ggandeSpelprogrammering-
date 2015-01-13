@@ -33,10 +33,7 @@ namespace GameProj.Model
         private char m_Tower4 = '4';
 
 
-        Character character;
-      
-
-        private string  m_currentLevel;
+       
 
      
 
@@ -62,14 +59,7 @@ namespace GameProj.Model
 
     
 
-        public Level(string levelString)
-        {
-            m_currentLevel = levelString;
-            ReadLevel();
-            character = new Character();
-        }
-
-       public void ReadLevel()
+        public void ReadLevel(string level)
         {
             for (int x = 0; x < g_levelWidth; x++)
             {
@@ -77,75 +67,75 @@ namespace GameProj.Model
                 {
                     int tile = y * g_levelWidth + x;
 
-                    if (m_currentLevel[tile] == m_filled)
+                    if (level[tile] == m_filled)
                     {
                         m_tiles[x, y] = Tile.FILLED;
                     }
 
-                    else if (m_currentLevel[tile] == m_sun)
+                    else if (level[tile] == m_sun)
                     {
                         m_tiles[x, y] = Tile.SUN;
                     }
 
-                    else  if (m_currentLevel[tile] == m_Enemy)
+                    else if (level[tile] == m_Enemy)
                     {
                      
                         m_tiles[x, y] = Tile.ENEMY1;
                     }
 
-                    else  if (m_currentLevel[tile] == m_tile)
+                    else if (level[tile] == m_tile)
                     {
 
                         m_tiles[x, y] = Tile.TILE;
                     }
 
-                    else if (m_currentLevel[tile] == m_flag)
+                    else if (level[tile] == m_flag)
                     {
 
                         m_tiles[x, y] = Tile.FLAG;
                     }
 
-                    else if (m_currentLevel[tile] == m_Tower1)
+                    else if (level[tile] == m_Tower1)
                     {
 
                         m_tiles[x, y] = Tile.TOWER1;
                     }
 
-                    else if (m_currentLevel[tile] == m_Tower2)
+                    else if (level[tile] == m_Tower2)
                     {
 
                         m_tiles[x, y] = Tile.TOWER2;
                     }
-                    else if (m_currentLevel[tile] == m_Tower3)
+                    else if (level[tile] == m_Tower3)
                     {
 
                         m_tiles[x, y] = Tile.TOWER3;
                     }
-                    else if (m_currentLevel[tile] == m_Tower4)
+                    else if (level[tile] == m_Tower4)
                     {
 
                         m_tiles[x, y] = Tile.TOWER4;
                     }
 
-                    else if (m_currentLevel[tile] == m_TileBlock)
+                    else if (level[tile] == m_TileBlock)
                     {
 
                         m_tiles[x, y] = Tile.TILEBLOCK;
                     }
 
-                    else if (m_currentLevel[tile] == m_TileBlock2)
+                    else if (level[tile] == m_TileBlock2)
                     {
 
                         m_tiles[x, y] = Tile.TILEBLOCK2;
                     }
 
-                    else if (m_currentLevel[tile] == m_Build1)
+                    else if (level[tile] == m_Build1)
                     {
 
                         m_tiles[x, y] = Tile.BUILD1;
                     }
 
-                    else if (m_currentLevel[tile] == m_Build2)
+                    else if (level[tile] == m_Build2)
                     {
 
                         m_tiles[x, y] = Tile.BUILD2;

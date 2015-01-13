@@ -59,7 +59,7 @@ namespace GameProj
         }
 
 
-        public void AnimationSprite(float timeElapsedMilliSeconds, View.CharacterView.Movement movement)
+        public void AnimationSprite(float timeElapsedMilliSeconds, View.GameView.Movement movement)
         {
             previousKeyboardState = currentKeyboardState;
             currentKeyboardState = Keyboard.GetState();
@@ -67,7 +67,7 @@ namespace GameProj
             sourceRect = new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight);
 
          
-            if (movement.Equals(GameProj.View.CharacterView.Movement.RIGHTMOVE))
+            if (movement.Equals(GameProj.View.GameView.Movement.RIGHTMOVE))
             {
                 
                 if (position.X < 500)
@@ -77,7 +77,7 @@ namespace GameProj
                 }
             }
 
-            if (movement.Equals(GameProj.View.CharacterView.Movement.LEFTMOVE))
+            if (movement.Equals(GameProj.View.GameView.Movement.LEFTMOVE))
             {
                 {
                     

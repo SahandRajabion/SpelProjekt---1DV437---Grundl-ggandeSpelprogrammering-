@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\player.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\player.xnb</Output>
       <Time>2014-12-18T01:22:38+01:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\background.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\background.xnb</Output>
       <Time>2014-12-24T20:09:24+01:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\backgroundxna.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\backgroundxna.xnb</Output>
       <Time>2014-12-24T20:12:26+01:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\bg2.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\bg2.xnb</Output>
       <Time>2015-01-03T04:03:52+01:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\space.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\space.xnb</Output>
       <Time>2014-12-25T02:05:46+01:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\spaceman.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\spaceman.xnb</Output>
       <Time>2014-12-25T02:10:30+01:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\rsz_spaceman.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\rsz_spaceman.xnb</Output>
       <Time>2014-12-25T02:14:06+01:00</Time>
     </Item>
     <Item>
@@ -70,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\asteroid.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\asteroid.xnb</Output>
       <Time>2014-12-25T02:47:34+01:00</Time>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\gohan.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\gohan.xnb</Output>
       <Time>2014-12-25T03:11:56+01:00</Time>
     </Item>
     <Item>
@@ -88,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\trans.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\trans.xnb</Output>
       <Time>2014-12-26T18:24:26+01:00</Time>
     </Item>
     <Item>
@@ -97,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\xnaBackgroundGame.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\xnaBackgroundGame.xnb</Output>
       <Time>2014-12-26T18:29:18+01:00</Time>
     </Item>
     <Item>
@@ -106,7 +106,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tile1.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tile1.xnb</Output>
       <Time>2014-12-26T18:33:06+01:00</Time>
     </Item>
     <Item>
@@ -115,7 +115,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\backXNA.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\backXNA.xnb</Output>
       <Time>2014-12-27T00:03:38+01:00</Time>
     </Item>
     <Item>
@@ -124,7 +124,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\mE7ZNU1419698481.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\mE7ZNU1419698481.xnb</Output>
       <Time>2014-12-27T17:44:18+01:00</Time>
     </Item>
     <Item>
@@ -133,7 +133,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\startingScreen.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\startingScreen.xnb</Output>
       <Time>2014-12-27T17:44:32+01:00</Time>
     </Item>
     <Item>
@@ -142,7 +142,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloudTile.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloudTile.xnb</Output>
       <Time>2014-12-27T17:48:22+01:00</Time>
     </Item>
     <Item>
@@ -151,7 +151,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloud1.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloud1.xnb</Output>
       <Time>2014-12-27T17:52:54+01:00</Time>
     </Item>
     <Item>
@@ -160,7 +160,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\PausScreen.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\PausScreen.xnb</Output>
       <Time>2014-12-28T03:12:30+01:00</Time>
     </Item>
     <Item>
@@ -169,7 +169,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\landscape.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\landscape.xnb</Output>
       <Time>2014-12-30T17:52:32+01:00</Time>
     </Item>
     <Item>
@@ -178,7 +178,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\latest.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\latest.xnb</Output>
       <Time>2014-12-30T17:59:16+01:00</Time>
     </Item>
     <Item>
@@ -187,7 +187,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\Level2.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\Level2.xnb</Output>
       <Time>2014-12-30T18:20:56+01:00</Time>
     </Item>
     <Item>
@@ -196,7 +196,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\Level3.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\Level3.xnb</Output>
       <Time>2014-12-31T01:42:48+01:00</Time>
     </Item>
     <Item>
@@ -205,7 +205,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\GameFinished.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\GameFinished.xnb</Output>
       <Time>2014-12-31T01:50:20+01:00</Time>
     </Item>
     <Item>
@@ -214,7 +214,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\GameOver.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\GameOver.xnb</Output>
       <Time>2015-01-03T03:56:04+01:00</Time>
     </Item>
     <Item>
@@ -223,7 +223,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sun.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sun.xnb</Output>
       <Time>2015-01-09T06:47:14+01:00</Time>
     </Item>
     <Item>
@@ -232,7 +232,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sun2.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sun2.xnb</Output>
       <Time>2015-01-09T06:47:14+01:00</Time>
     </Item>
     <Item>
@@ -241,7 +241,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\angrySun.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\angrySun.xnb</Output>
       <Time>2015-01-09T06:55:34+01:00</Time>
     </Item>
     <Item>
@@ -250,7 +250,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\flag.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\flag.xnb</Output>
       <Time>2015-01-09T07:08:02+01:00</Time>
     </Item>
     <Item>
@@ -259,7 +259,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\arrow.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\arrow.xnb</Output>
       <Time>2015-01-09T07:20:16+01:00</Time>
     </Item>
     <Item>
@@ -268,55 +268,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\line.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\line.xnb</Output>
       <Time>2015-01-09T20:18:14+01:00</Time>
-    </Item>
-    <Item>
-      <Source>sound.mp3</Source>
-      <Name>sound</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.xnb</Output>
-      <Extra>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.wma</Extra>
-      <Time>2014-12-18T03:53:58+01:00</Time>
-    </Item>
-    <Item>
-      <Source>jumping.mp3</Source>
-      <Name>jumping</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.xnb</Output>
-      <Time>2014-12-25T02:28:06+01:00</Time>
-    </Item>
-    <Item>
-      <Source>music.mp3</Source>
-      <Name>music</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.xnb</Output>
-      <Extra>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.wma</Extra>
-      <Time>2014-12-28T02:17:50+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Smashing.mp3</Source>
-      <Name>Smashing</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\Smashing.xnb</Output>
-      <Time>2015-01-09T16:05:34+01:00</Time>
-    </Item>
-    <Item>
-      <Source>levelTime.spritefont</Source>
-      <Name>levelTime</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\levelTime.xnb</Output>
-      <Time>2015-01-02T02:55:32+01:00</Time>
     </Item>
     <Item>
       <Source>enemyEagle.png</Source>
@@ -324,7 +277,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\enemyEagle.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\enemyEagle.xnb</Output>
       <Time>2015-01-10T20:15:22.6442861+01:00</Time>
     </Item>
     <Item>
@@ -333,7 +286,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\smoke.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\smoke.xnb</Output>
       <Time>2015-01-11T06:27:02.9310364+01:00</Time>
     </Item>
     <Item>
@@ -342,7 +295,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\ssmoke.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\ssmoke.xnb</Output>
       <Time>2015-01-11T07:26:16.6093182+01:00</Time>
     </Item>
     <Item>
@@ -351,7 +304,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloud.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\cloud.xnb</Output>
       <Time>2015-01-11T07:31:49.8893808+01:00</Time>
     </Item>
     <Item>
@@ -360,7 +313,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\TowerBottom.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\TowerBottom.xnb</Output>
       <Time>2015-01-12T04:11:22.27592+01:00</Time>
     </Item>
     <Item>
@@ -369,7 +322,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\TowerMiddle.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\TowerMiddle.xnb</Output>
       <Time>2015-01-12T04:11:22.4639308+01:00</Time>
     </Item>
     <Item>
@@ -378,7 +331,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\TowerMiddleTop.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\TowerMiddleTop.xnb</Output>
       <Time>2015-01-12T04:11:22.4689311+01:00</Time>
     </Item>
     <Item>
@@ -387,7 +340,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\TowerTops.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\TowerTops.xnb</Output>
       <Time>2015-01-12T04:11:22.4719313+01:00</Time>
     </Item>
     <Item>
@@ -396,7 +349,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\test.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\test.xnb</Output>
       <Time>2015-01-12T04:22:00.0864065+01:00</Time>
     </Item>
     <Item>
@@ -405,7 +358,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tiles2.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tiles2.xnb</Output>
       <Time>2015-01-12T04:35:00.6080663+01:00</Time>
     </Item>
     <Item>
@@ -414,7 +367,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tileblock.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tileblock.xnb</Output>
       <Time>2015-01-12T05:02:01.814817+01:00</Time>
     </Item>
     <Item>
@@ -423,7 +376,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tileblock2.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tileblock2.xnb</Output>
       <Time>2015-01-12T05:02:01.8188172+01:00</Time>
     </Item>
     <Item>
@@ -432,7 +385,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tileblock3.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tileblock3.xnb</Output>
       <Time>2015-01-12T05:02:01.8218174+01:00</Time>
     </Item>
     <Item>
@@ -441,7 +394,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tileblocks.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\tileblocks.xnb</Output>
       <Time>2015-01-12T05:19:05.9504036+01:00</Time>
     </Item>
     <Item>
@@ -450,7 +403,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\build1.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\build1.xnb</Output>
       <Time>2015-01-12T05:26:50.5869807+01:00</Time>
     </Item>
     <Item>
@@ -459,8 +412,55 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\build2.xnb</Output>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\build2.xnb</Output>
       <Time>2015-01-12T05:26:50.5899809+01:00</Time>
+    </Item>
+    <Item>
+      <Source>sound.mp3</Source>
+      <Name>sound</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.xnb</Output>
+      <Extra>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\sound.wma</Extra>
+      <Time>2014-12-18T03:53:58+01:00</Time>
+    </Item>
+    <Item>
+      <Source>jumping.mp3</Source>
+      <Name>jumping</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\jumping.xnb</Output>
+      <Time>2014-12-25T02:28:06+01:00</Time>
+    </Item>
+    <Item>
+      <Source>music.mp3</Source>
+      <Name>music</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.xnb</Output>
+      <Extra>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\music.wma</Extra>
+      <Time>2014-12-28T02:17:50+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Smashing.mp3</Source>
+      <Name>Smashing</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\Smashing.xnb</Output>
+      <Time>2015-01-09T16:05:34+01:00</Time>
+    </Item>
+    <Item>
+      <Source>levelTime.spritefont</Source>
+      <Name>levelTime</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\levelTime.xnb</Output>
+      <Time>2015-01-02T02:55:32+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -468,10 +468,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProjContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProjContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Sahand\Desktop\Ny mapp (4)\GameProj\GameProj\GameProj\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProjContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProjContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Sahand\Desktop\GamePROJ-NewMap\GameProj\GameProj\GameProj\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

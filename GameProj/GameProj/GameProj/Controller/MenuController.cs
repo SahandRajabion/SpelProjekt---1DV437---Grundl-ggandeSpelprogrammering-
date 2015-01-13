@@ -10,14 +10,12 @@ namespace GameProj.Controller
     class MenuController
     {
         private MenuView view;
-        private KeyboardState oldKeyboardState;
        
         private GameState gameState = GameState.StartScreen;
 
         public MenuController(MenuView menuView)
         {
             view = menuView;
-            oldKeyboardState = new KeyboardState();
         }
 
 
@@ -32,89 +30,26 @@ namespace GameProj.Controller
         }
 
 
+
         /// <summary>
         /// Updates the starting screen 
         /// </summary>
         /// <param name="keyboard">KeyboardState</param>
-        internal void UpdateStartScreen(KeyboardState keyboard)
+        internal bool UpdateMenuInput()
         {
-            if (keyboard.IsKeyDown(Keys.Enter))
+            if (Keyboard.GetState().IsKeyDown(Keys.Enter))
             {
-                oldKeyboardState = keyboard;
+                return true;
 
             }
-            else if (keyboard.IsKeyUp(Keys.Enter) && oldKeyboardState.IsKeyDown(Keys.Enter))
+            else 
+
             {
-                oldKeyboardState = new KeyboardState();
-                gameState = GameState.InGame;
+                return false;
 
                
             }
         }
-
-
-        /// <summary>
-        /// Updates the screen between the levels.
-        /// </summary>
-        /// <param name="keyboard">KeyboardState</param>
-        internal void UpdateBetweenLevelScreen(KeyboardState keyboard)
-        {
-
-            if (keyboard.IsKeyDown(Keys.Enter))
-            {
-                oldKeyboardState = keyboard;
-            }
-            else if (keyboard.IsKeyUp(Keys.Enter) && oldKeyboardState.IsKeyDown(Keys.Enter))
-            {
-                oldKeyboardState = new KeyboardState();
-                gameState = GameState.InGame;
-            }
-
-          
-        }
-
-
-        /// <summary>
-        /// Updates the final screen when the game is done.
-        /// </summary>
-        /// <param name="keyboard"></param>
-        internal void UpdateGameEnd(KeyboardState keyboard)
-        {
-
-            if (keyboard.IsKeyDown(Keys.Enter))
-            {
-                oldKeyboardState = keyboard;
-            }
-            else if (keyboard.IsKeyUp(Keys.Enter) && oldKeyboardState.IsKeyDown(Keys.Enter))
-            {
-                oldKeyboardState = new KeyboardState();
-                gameState = GameState.StartScreen;
-            }
-
-
-        }
-
-
-        /// <summary>
-        /// Updates the final screen when the game is done.
-        /// </summary>
-        /// <param name="keyboard"></param>
-        internal void UpdateGameOver(KeyboardState keyboard)
-        {
-
-            if (keyboard.IsKeyDown(Keys.Enter))
-            {
-                oldKeyboardState = keyboard;
-            }
-            else if (keyboard.IsKeyUp(Keys.Enter) && oldKeyboardState.IsKeyDown(Keys.Enter))
-            {
-                oldKeyboardState = new KeyboardState();
-                gameState = GameState.StartScreen;
-            }
-
-
-        }
-
 
 
         /// <summary>

@@ -12,7 +12,7 @@ namespace GameProj.Model
 
         public Vector2 enemyPosition;
         public Vector2 enemyDefaultPosition;
-        private float speed = 0.3f;
+        private float speed = 0.15f;
 
 
         public EnemyLine()

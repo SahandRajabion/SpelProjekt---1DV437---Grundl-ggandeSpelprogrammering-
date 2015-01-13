@@ -113,7 +113,7 @@ namespace GameProj.View
             if (nextLevel == 3)
             {
                 DrawTexture(m_gameBetween2);
-            }
+           }
 
 
         }
